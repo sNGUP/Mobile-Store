@@ -457,7 +457,6 @@
       <button class="tab-btn" onclick="changeTab('addresses')">My Addresses</button>
     </div>
 
-    <!-- Profile Tab -->
     <div id="profile" class="tab-content active">
       <div class="content-card">
         <div class="profile-header">
@@ -468,7 +467,6 @@
         <div class="success-msg" id="successMsg">Profile updated successfully!</div>
         <div class="error-msg" id="errorMsg">Error updating profile. Please try again.</div>
 
-        <!-- View Mode -->
         <div id="viewMode">
           <div class="info-grid">
             <div class="info-card">
@@ -486,7 +484,6 @@
           </div>
         </div>
 
-        <!-- Edit Mode -->
         <form id="editForm" style="display: none;" onsubmit="saveProfile(event)">
           <div class="info-grid">
             <div class="form-group">
@@ -511,7 +508,6 @@
       </div>
     </div>
 
-    <!-- Orders Tab -->
     <div id="orders" class="tab-content">
       <div class="content-card">
         <h2 style="margin-bottom: 25px; color: #1f2937; font-size: 24px;">Order History</h2>
@@ -528,7 +524,6 @@
       </div>
     </div>
 
-    <!-- Addresses Tab -->
     <div id="addresses" class="tab-content">
       <div class="content-card">
         <h2 style="margin-bottom: 25px; color: #1f2937; font-size: 24px;">Saved Addresses</h2>
@@ -582,10 +577,9 @@
       }
     });
 
-    // تحميل بيانات الملف الشخصي من Firebase
     async function loadProfileData(user) {
       try {
-        // تحميل البيانات من Firestore
+
         const userDocRef = doc(db, 'users', user.uid);
         const userDoc = await getDoc(userDocRef);
         
@@ -595,7 +589,6 @@
           phone: 'Not set'
         };
 
-        // إذا كان المستند موجود، استخدم البيانات المحفوظة
         if (userDoc.exists()) {
           const data = userDoc.data();
           userData.phone = data.phone || 'Not set';
@@ -604,11 +597,9 @@
           }
         }
 
-        // عرض البيانات
         document.getElementById('displayName').textContent = userData.displayName;
         document.getElementById('displayEmail').textContent = userData.email;
         document.getElementById('displayPhone').textContent = userData.phone;
-        
         document.getElementById('inputName').value = userData.displayName !== 'Not set' ? userData.displayName : '';
         document.getElementById('inputEmail').value = userData.email;
         document.getElementById('inputPhone').value = userData.phone !== 'Not set' ? userData.phone : '';
@@ -719,10 +710,8 @@
       const phone = document.getElementById('inputPhone').value.trim();
 
       try {
-        // حفظ الاسم في Firebase Auth
         await updateProfile(currentUser, { displayName: name });
         
-        // حفظ البيانات الكاملة في Firestore
         const userDocRef = doc(db, 'users', currentUser.uid);
         await setDoc(userDocRef, {
           displayName: name,
@@ -731,12 +720,10 @@
           updatedAt: new Date().toISOString()
         }, { merge: true });
 
-        // تحديث العرض
         document.getElementById('displayName').textContent = name;
         document.getElementById('displayPhone').textContent = phone || 'Not set';
         document.getElementById('userName').textContent = name;
         
-        // إظهار رسالة النجاح
         const successMsg = document.getElementById('successMsg');
         successMsg.classList.add('show');
         setTimeout(() => successMsg.classList.remove('show'), 3000);
@@ -771,4 +758,5 @@
     window.logout = logout;
   </script>
 </body>
+
 </html>
