@@ -778,10 +778,8 @@
     };
 
     try {
-      // حفظ الطلب في Firebase
       await addDoc(collection(db, 'orders'), orderData);
 
-      // حفظ العنوان
       const addressData = {
         userId: currentUser.uid,
         governorate: window.shippingData.governorate,
@@ -799,10 +797,7 @@
         await addDoc(collection(db, 'addresses'), addressData);
       }
 
-      // ✅ مسح السلة من localStorage بعد نجاح الطلب
       localStorage.removeItem('cart');
-
-      // عرض رسالة النجاح
       document.getElementById('orderNumber').textContent = orderNumber;
       document.getElementById('step2').classList.add('completed');
       document.getElementById('step2').classList.remove('active');
@@ -818,4 +813,5 @@
 
   </script>
 </body>
+
 </html>
