@@ -121,7 +121,7 @@
       <div class="popup-body" id="cartItems"></div>
     </div>
   </div>
-  <!-- ====== ACCOUNT POPUP (SIGN IN/SIGN UP) ====== -->
+
   <div class="popup-overlay" id="accountPopup" onclick="closePopupOutside(event, 'accountPopup')">
     <div class="popup-content" onclick="event.stopPropagation()">
       <div class="popup-header">
@@ -140,7 +140,6 @@
         </button>
       </div>
       <div class="popup-body">
-        <!-- Tabs for switching between Sign In and Sign Up -->
         <div class="auth-tabs">
           <button class="auth-tab active" onclick="switchAuthTab('signin')">Sign In</button>
           <button class="auth-tab" onclick="switchAuthTab('signup')">Create Account</button>
@@ -226,9 +225,7 @@
   </div>
 
   <!-- ====== FIREBASE SDK ====== -->
-  <!-- Import Firebase modules for authentication -->
   <script type="module">
-    // Import Firebase modules from CDN
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
     import { 
       getAuth, 
@@ -241,7 +238,6 @@
       signOut 
     } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
 
-    // Firebase configuration object
     const firebaseConfig = {
       apiKey: "AIzaSyAX0ZbKgNoiQuPkrDjPYdW4d3MXbRzibNg",
       authDomain: "mobile-store-76d60.firebaseapp.com",
@@ -251,11 +247,10 @@
       appId: "1:92732043159:web:96083c907b065fc37b5ed2",
       measurementId: "G-LC1Q9TMRYZ"
     };
-    // Initialize Firebase app
+
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     
-    // Make Firebase functions available globally for use in inline event handlers
     window.firebaseAuth = auth;
     window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
     window.signInWithEmailAndPassword = signInWithEmailAndPassword;
@@ -265,14 +260,12 @@
     window.onAuthStateChanged = onAuthStateChanged;
     window.signOut = signOut;
 
-    // Listen for authentication state changes
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        // User is signed in
         console.log('User logged in:', user.email);
         updateUIForLoggedInUser(user);
+        
       } else {
-        // User is signed out
         console.log('User logged out');
         updateUIForLoggedOutUser();
       }
@@ -281,4 +274,5 @@
   
   <script src="JS/main.js"></script>
 </body>
+
 </html>
