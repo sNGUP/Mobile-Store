@@ -1,15 +1,15 @@
     const products = [
       {
-        id: 1, // Unique identifier
+        id: 1, 
         name: "iPhone 15 Pro Max",
         brand: "Apple",
-        price: 1199, // Current price in dollars
-        oldPrice: 1399, // Original price (for showing discount)
+        price: 1199, 
+        oldPrice: 1399, 
         image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&q=80",
-        specs: ["A17 Pro", "8GB RAM", "256GB", "5G"], // Technical specifications
-        badge: "New", // Badge text
-        badgeType: "new", // Badge style type
-        category: "apple" // For filtering
+        specs: ["A17 Pro", "8GB RAM", "256GB", "5G"], 
+        badge: "New", 
+        badgeType: "new", 
+        category: "apple" 
       },
       {
         id: 2,
@@ -64,7 +64,7 @@
         name: "Samsung Galaxy Z Fold 5",
         brand: "Samsung",
         price: 1599,
-        oldPrice: null, // No discount
+        oldPrice: null,
         image: "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=500&q=80",
         specs: ["Snapdragon 8 Gen 2", "12GB RAM", "512GB", "5G"],
         badge: "New",
@@ -100,7 +100,6 @@
 let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
-// دوال الحفظ
 function saveCart() {
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartCount();
@@ -567,4 +566,5 @@ function goToAccount() {
   } else {
     toggleAccount();
   }
+
 }
