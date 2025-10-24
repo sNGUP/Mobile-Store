@@ -94,6 +94,18 @@
         badge: "Sale",
         badgeType: "sale",
         category: "apple"
+      },
+      {
+        id: 9,
+        name: "iPhone 13",
+        brand: "Apple",
+        price: 599,
+        oldPrice: 799,
+        image: "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500&q=80",
+        specs: ["A16 Bionic", "4GB RAM", "128GB", "5G"],
+        badge: "Sale",
+        badgeType: "sale",
+        category: "apple"
       }
     ];
 
@@ -143,8 +155,8 @@ function displayProducts(productsToShow) {
           ${product.specs.map(spec => `<span class="spec-item">${spec}</span>`).join('')}
         </div>
         <div class="product-price">
-          <span class="current-price">$${product.price}</span>
-          ${product.oldPrice ? `<span class="old-price">$${product.oldPrice}</span>` : ''}
+          <span class="current-price">${product.price} EGP</span>
+          ${product.oldPrice ? `<span class="old-price">${product.oldPrice} EGP</span>` : ''}
         </div>
         <button class="add-to-cart-btn" onclick="addToCart(${product.id})">
           <svg viewBox="0 0 24 24">
@@ -278,7 +290,7 @@ function displayWishlistItems() {
       </div>
       <div class="popup-item-info">
         <div class="popup-item-name">${item.name}</div>
-        <div class="popup-item-price">$${item.price}</div>
+        <div class="popup-item-price">${item.price} EGP</div>
         <button class="remove-btn" onclick="removeFromWishlist(${item.id})">Remove</button>
       </div>
     </div>
@@ -358,7 +370,7 @@ function displayCartItems() {
         </div>
         <div class="popup-item-info">
           <div class="popup-item-name">${item.name} x${item.quantity}</div>
-          <div class="popup-item-price">$${item.price * item.quantity}</div>
+          <div class="popup-item-price">${item.price * item.quantity} EGP</div>
           <button class="remove-btn" onclick="removeFromCart(${item.id})">Remove</button>
         </div>
       </div>
@@ -366,7 +378,7 @@ function displayCartItems() {
     <div style="margin-top: 20px; padding-top: 20px; border-top: 2px solid #e5e7eb;">
       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
         <span style="font-size: 18px; font-weight: 600; color: #1f2937;">Total:</span>
-        <span style="font-size: 24px; font-weight: 700; color: #2563eb;">$${total}</span>
+        <span style="font-size: 24px; font-weight: 700; color: #2563eb;">${total} EGP</span>
       </div>
       <button class="checkout-btn" onclick="proceedToCheckout()">Proceed to Checkout</button>
     </div>
@@ -566,5 +578,4 @@ function goToAccount() {
   } else {
     toggleAccount();
   }
-
 }
