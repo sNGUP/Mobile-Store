@@ -3,25 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mobile Store</title>
-  <link rel="icon" type="imag/png" href="images/iconlogo.png">
+  <title>Mobile Store - Best Phones & Deals</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/iconlogo.png">
+  
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="CSS/style.css">
 </head>
+
 <body>
+  <!-- ========== HEADER ========== -->
   <header class="header">
+    <!-- Top Banner -->
     <div class="top-banner">
       Special offers on all phones! Up to 30% OFF 
       <a href="#offers">Shop Now</a>
     </div>
 
+    <!-- Main Header -->
     <div class="main-header">
+      <!-- Logo -->
       <div class="logo" onclick="goToHome()">
-        <img src="../images/mobile_logo.png" alt="Mobile Store Logo">
+        <img src="images/mobile_logo.png" alt="Mobile Store Logo">
       </div>
 
+      <!-- Search Bar -->
       <div class="search-container">
-        <input type="text" class="search-box" id="searchInput" placeholder="Search for your favorite phone...">
-        <button class="search-btn" onclick="searchProducts()">
+        <input 
+          type="text" 
+          class="search-box" 
+          id="searchInput" 
+          placeholder="Search for your favorite phone..."
+          aria-label="Search products">
+        <button class="search-btn" onclick="searchProducts()" aria-label="Search">
           <svg viewBox="0 0 24 24">
             <circle cx="11" cy="11" r="8"/>
             <path d="m21 21-4.35-4.35"/>
@@ -29,15 +44,18 @@
         </button>
       </div>
 
+      <!-- Header Actions -->
       <div class="header-actions">
-        <button class="action-btn" title="Wishlist" onclick="toggleWishlist()">
+        <!-- Wishlist Button -->
+        <button class="action-btn" title="Wishlist" onclick="toggleWishlist()" aria-label="Wishlist">
           <svg viewBox="0 0 24 24">
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
           </svg>
           <span class="badge" id="wishlistCount">0</span>
         </button>
 
-        <button class="action-btn" title="Shopping Cart" onclick="toggleCart()">
+        <!-- Cart Button -->
+        <button class="action-btn" title="Shopping Cart" onclick="toggleCart()" aria-label="Shopping Cart">
           <svg viewBox="0 0 24 24">
             <circle cx="9" cy="21" r="1"/>
             <circle cx="20" cy="21" r="1"/>
@@ -46,14 +64,16 @@
           <span class="badge" id="cartCount">0</span>
         </button>
         
-        <button class="action-btn" title="My Account" onclick="goToAccount()">
+        <!-- Account Button -->
+        <button class="action-btn" title="My Account" onclick="goToAccount()" aria-label="My Account">
           <svg viewBox="0 0 24 24">
             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
             <circle cx="12" cy="7" r="4"/>
           </svg>
         </button>
 
-        <button class="mobile-menu-btn" onclick="toggleMenu()">
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-btn" onclick="toggleMenu()" aria-label="Menu">
           <span></span>
           <span></span>
           <span></span>
@@ -61,6 +81,7 @@
       </div>
     </div>
 
+    <!-- Navigation Menu -->
     <nav class="nav-menu" id="navMenu">
       <a class="nav-link active" data-category="all">Home</a>
       <a class="nav-link" data-category="all">All Phones</a>
@@ -71,15 +92,18 @@
     </nav>
   </header>
 
+  <!-- ========== MAIN CONTENT ========== -->
   <main class="main-content">
     <div class="section-header">
       <h1 id="sectionTitle">Featured Phones</h1>
       <p id="sectionDesc">Discover the latest smartphones with amazing features and competitive prices</p>
     </div>
 
+    <!-- Products Grid -->
     <div class="products-grid" id="productsGrid"></div>
   </main>
 
+  <!-- ========== WISHLIST POPUP ========== -->
   <div class="popup-overlay" id="wishlistPopup" onclick="closePopupOutside(event, 'wishlistPopup')">
     <div class="popup-content" onclick="event.stopPropagation()">
       <div class="popup-header">
@@ -89,7 +113,7 @@
           </svg>
           My Wishlist
         </h2>
-        <button class="close-popup" onclick="closePopup('wishlistPopup')">
+        <button class="close-popup" onclick="closePopup('wishlistPopup')" aria-label="Close">
           <svg viewBox="0 0 24 24">
             <line x1="18" y1="6" x2="6" y2="18"/>
             <line x1="6" y1="6" x2="18" y2="18"/>
@@ -100,6 +124,7 @@
     </div>
   </div>
 
+  <!-- ========== CART POPUP ========== -->
   <div class="popup-overlay" id="cartPopup" onclick="closePopupOutside(event, 'cartPopup')">
     <div class="popup-content" onclick="event.stopPropagation()">
       <div class="popup-header">
@@ -111,7 +136,7 @@
           </svg>
           Shopping Cart
         </h2>
-        <button class="close-popup" onclick="closePopup('cartPopup')">
+        <button class="close-popup" onclick="closePopup('cartPopup')" aria-label="Close">
           <svg viewBox="0 0 24 24">
             <line x1="18" y1="6" x2="6" y2="18"/>
             <line x1="6" y1="6" x2="18" y2="18"/>
@@ -122,6 +147,7 @@
     </div>
   </div>
 
+  <!-- ========== ACCOUNT POPUP ========== -->
   <div class="popup-overlay" id="accountPopup" onclick="closePopupOutside(event, 'accountPopup')">
     <div class="popup-content" onclick="event.stopPropagation()">
       <div class="popup-header">
@@ -132,14 +158,16 @@
           </svg>
           My Account
         </h2>
-        <button class="close-popup" onclick="closePopup('accountPopup')">
+        <button class="close-popup" onclick="closePopup('accountPopup')" aria-label="Close">
           <svg viewBox="0 0 24 24">
             <line x1="18" y1="6" x2="6" y2="18"/>
             <line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
       </div>
+
       <div class="popup-body">
+        <!-- Auth Tabs -->
         <div class="auth-tabs">
           <button class="auth-tab active" onclick="switchAuthTab('signin')">Sign In</button>
           <button class="auth-tab" onclick="switchAuthTab('signup')">Create Account</button>
@@ -148,12 +176,12 @@
         <!-- Sign In Form -->
         <form class="auth-form active" id="signinForm" onsubmit="handleSignIn(event)">
           <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="Enter your email" required>
+            <label for="signinEmail">Email Address</label>
+            <input type="email" id="signinEmail" placeholder="Enter your email" required>
           </div>
           <div class="form-group">
-            <label>Password</label>
-            <input type="password" placeholder="Enter your password" required>
+            <label for="signinPassword">Password</label>
+            <input type="password" id="signinPassword" placeholder="Enter your password" required>
           </div>
           <button type="submit" class="form-submit-btn">Sign In</button>
           <div class="form-footer">
@@ -182,20 +210,20 @@
         <!-- Sign Up Form -->
         <form class="auth-form" id="signupForm" onsubmit="handleSignUp(event)">
           <div class="form-group">
-            <label>Full Name</label>
-            <input type="text" placeholder="Enter your full name" required>
+            <label for="signupName">Full Name</label>
+            <input type="text" id="signupName" placeholder="Enter your full name" required>
           </div>
           <div class="form-group">
-            <label>Email Address</label>
-            <input type="email" placeholder="Enter your email" required>
+            <label for="signupEmail">Email Address</label>
+            <input type="email" id="signupEmail" placeholder="Enter your email" required>
           </div>
           <div class="form-group">
-            <label>Password</label>
-            <input type="password" placeholder="Create a password" required minlength="6">
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" placeholder="Create a password" required minlength="6">
           </div>
           <div class="form-group">
-            <label>Confirm Password</label>
-            <input type="password" placeholder="Confirm your password" required minlength="6">
+            <label for="signupConfirmPassword">Confirm Password</label>
+            <input type="password" id="signupConfirmPassword" placeholder="Confirm your password" required minlength="6">
           </div>
           <button type="submit" class="form-submit-btn">Create Account</button>
           <div class="form-footer">
@@ -224,7 +252,7 @@
     </div>
   </div>
 
-  <!-- ====== FIREBASE SDK ====== -->
+  <!-- ========== FIREBASE SDK ========== -->
   <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
     import { 
@@ -238,6 +266,7 @@
       signOut 
     } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
 
+    // Firebase Configuration
     const firebaseConfig = {
       apiKey: "AIzaSyAX0ZbKgNoiQuPkrDjPYdW4d3MXbRzibNg",
       authDomain: "mobile-store-76d60.firebaseapp.com",
@@ -248,9 +277,11 @@
       measurementId: "G-LC1Q9TMRYZ"
     };
 
+    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     
+    // Expose to global scope for main.js
     window.firebaseAuth = auth;
     window.createUserWithEmailAndPassword = createUserWithEmailAndPassword;
     window.signInWithEmailAndPassword = signInWithEmailAndPassword;
@@ -260,11 +291,11 @@
     window.onAuthStateChanged = onAuthStateChanged;
     window.signOut = signOut;
 
+    // Auth State Observer
     onAuthStateChanged(auth, (user) => {
       if (user) {
         console.log('User logged in:', user.email);
         updateUIForLoggedInUser(user);
-        
       } else {
         console.log('User logged out');
         updateUIForLoggedOutUser();
@@ -272,7 +303,7 @@
     });
   </script>
   
+  <!-- Main JavaScript -->
   <script src="JS/main.js"></script>
 </body>
-
 </html>
