@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Account - Mobile Store</title>
+  <link rel="icon" type="image/png" href="../images/iconlogo.png">
+  
   <style>
+    /* ========== BASE STYLES ========== */
     * {
       margin: 0;
       padding: 0;
@@ -16,6 +19,7 @@
       background: #f8f9fa;
     }
 
+    /* ========== HEADER ========== */
     .header {
       background: white;
       box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
@@ -54,12 +58,14 @@
       background: #e5e7eb;
     }
 
+    /* ========== CONTAINER ========== */
     .container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 40px 5%;
     }
 
+    /* ========== WELCOME SECTION ========== */
     .welcome-section {
       background: white;
       padding: 30px;
@@ -84,6 +90,7 @@
       font-weight: 600;
     }
 
+    /* ========== TABS ========== */
     .tabs {
       display: flex;
       gap: 10px;
@@ -125,6 +132,7 @@
       display: block;
     }
 
+    /* ========== CONTENT CARD ========== */
     .content-card {
       background: white;
       padding: 30px;
@@ -144,6 +152,7 @@
       font-size: 24px;
     }
 
+    /* ========== BUTTONS ========== */
     .edit-btn {
       padding: 10px 20px;
       background: #2563eb;
@@ -168,6 +177,7 @@
       background: #dc2626;
     }
 
+    /* ========== INFO CARDS ========== */
     .info-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -197,6 +207,7 @@
       font-weight: 600;
     }
 
+    /* ========== FORMS ========== */
     .form-group {
       margin-bottom: 20px;
     }
@@ -273,6 +284,7 @@
       background: #f9fafb;
     }
 
+    /* ========== ORDERS ========== */
     .order-item {
       background: #f9fafb;
       padding: 20px;
@@ -317,6 +329,7 @@
       margin-top: 10px;
     }
 
+    /* ========== ADDRESSES ========== */
     .address-item {
       background: #f9fafb;
       padding: 20px;
@@ -338,6 +351,7 @@
       line-height: 1.6;
     }
 
+    /* ========== EMPTY STATE ========== */
     .empty-state {
       text-align: center;
       padding: 60px 20px;
@@ -353,17 +367,28 @@
       margin: 0 auto 15px;
     }
 
-    .success-msg {
-      background: #dcfce7;
-      color: #15803d;
+    /* ========== MESSAGES ========== */
+    .success-msg, .error-msg {
       padding: 15px 20px;
       border-radius: 8px;
       margin-bottom: 20px;
-      border-left: 4px solid #15803d;
+      border-left: 4px solid;
       display: none;
     }
 
-    .success-msg.show {
+    .success-msg {
+      background: #dcfce7;
+      color: #15803d;
+      border-left-color: #15803d;
+    }
+
+    .error-msg {
+      background: #fee2e2;
+      color: #dc2626;
+      border-left-color: #dc2626;
+    }
+
+    .success-msg.show, .error-msg.show {
       display: block;
       animation: slideIn 0.3s ease;
     }
@@ -379,21 +404,7 @@
       }
     }
 
-    .error-msg {
-      background: #fee2e2;
-      color: #dc2626;
-      padding: 15px 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      border-left: 4px solid #dc2626;
-      display: none;
-    }
-
-    .error-msg.show {
-      display: block;
-      animation: slideIn 0.3s ease;
-    }
-
+    /* ========== LOGOUT ========== */
     .logout-footer {
       max-width: 1200px;
       margin: 40px auto 0;
@@ -419,6 +430,7 @@
       transform: translateY(-2px);
     }
 
+    /* ========== RESPONSIVE ========== */
     @media (max-width: 768px) {
       .header {
         flex-direction: column;
@@ -434,10 +446,17 @@
       .btn-group {
         flex-direction: column;
       }
+
+      .tabs {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+      }
     }
   </style>
 </head>
+
 <body>
+  <!-- ========== HEADER ========== -->
   <header class="header">
     <div class="logo" onclick="window.location.href='../index.html'">
       <img src="../images/mobile_logo.png" alt="Mobile Store Logo">
@@ -445,18 +464,22 @@
     <button class="back-home-btn" onclick="window.location.href='../index.html'">← Back to Shop</button>
   </header>
 
+  <!-- ========== MAIN CONTAINER ========== -->
   <div class="container">
+    <!-- Welcome Section -->
     <div class="welcome-section">
       <h1>Welcome, <span class="user-email" id="userName">User</span></h1>
       <p>Manage your profile, orders and addresses</p>
     </div>
 
+    <!-- Tabs Navigation -->
     <div class="tabs">
       <button class="tab-btn active" onclick="changeTab('profile')">My Profile</button>
       <button class="tab-btn" onclick="changeTab('orders')">My Orders</button>
       <button class="tab-btn" onclick="changeTab('addresses')">My Addresses</button>
     </div>
 
+    <!-- Profile Tab -->
     <div id="profile" class="tab-content active">
       <div class="content-card">
         <div class="profile-header">
@@ -467,6 +490,7 @@
         <div class="success-msg" id="successMsg">Profile updated successfully!</div>
         <div class="error-msg" id="errorMsg">Error updating profile. Please try again.</div>
 
+        <!-- View Mode -->
         <div id="viewMode">
           <div class="info-grid">
             <div class="info-card">
@@ -484,18 +508,19 @@
           </div>
         </div>
 
+        <!-- Edit Form -->
         <form id="editForm" style="display: none;" onsubmit="saveProfile(event)">
           <div class="info-grid">
             <div class="form-group">
-              <label>Full Name</label>
+              <label for="inputName">Full Name</label>
               <input type="text" id="inputName" required>
             </div>
             <div class="form-group">
-              <label>Email</label>
+              <label for="inputEmail">Email</label>
               <input type="email" id="inputEmail" disabled>
             </div>
             <div class="form-group">
-              <label>Phone</label>
+              <label for="inputPhone">Phone</label>
               <input type="tel" id="inputPhone" placeholder="+20 123 456 7890">
             </div>
           </div>
@@ -508,6 +533,7 @@
       </div>
     </div>
 
+    <!-- Orders Tab -->
     <div id="orders" class="tab-content">
       <div class="content-card">
         <h2 style="margin-bottom: 25px; color: #1f2937; font-size: 24px;">Order History</h2>
@@ -524,6 +550,7 @@
       </div>
     </div>
 
+    <!-- Addresses Tab -->
     <div id="addresses" class="tab-content">
       <div class="content-card">
         <h2 style="margin-bottom: 25px; color: #1f2937; font-size: 24px;">Saved Addresses</h2>
@@ -540,15 +567,18 @@
     </div>
   </div>
 
+  <!-- ========== LOGOUT FOOTER ========== -->
   <div class="logout-footer">
     <button class="logout-btn" onclick="logout()">Logout</button>
   </div>
 
+  <!-- ========== FIREBASE & SCRIPTS ========== -->
   <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
     import { getAuth, onAuthStateChanged, signOut, updateProfile } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
     import { getFirestore, collection, query, where, getDocs, doc, setDoc, getDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 
+    // Firebase Configuration
     const firebaseConfig = {
       apiKey: "AIzaSyAX0ZbKgNoiQuPkrDjPYdW4d3MXbRzibNg",
       authDomain: "mobile-store-76d60.firebaseapp.com",
@@ -559,12 +589,14 @@
       measurementId: "G-LC1Q9TMRYZ"
     };
 
+    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
 
     let currentUser = null;
 
+    // Auth State Observer
     onAuthStateChanged(auth, (user) => {
       if (user) {
         currentUser = user;
@@ -577,9 +609,9 @@
       }
     });
 
+    // Load Profile Data
     async function loadProfileData(user) {
       try {
-
         const userDocRef = doc(db, 'users', user.uid);
         const userDoc = await getDoc(userDocRef);
         
@@ -592,9 +624,7 @@
         if (userDoc.exists()) {
           const data = userDoc.data();
           userData.phone = data.phone || 'Not set';
-          if (data.displayName) {
-            userData.displayName = data.displayName;
-          }
+          if (data.displayName) userData.displayName = data.displayName;
         }
 
         document.getElementById('displayName').textContent = userData.displayName;
@@ -603,12 +633,12 @@
         document.getElementById('inputName').value = userData.displayName !== 'Not set' ? userData.displayName : '';
         document.getElementById('inputEmail').value = userData.email;
         document.getElementById('inputPhone').value = userData.phone !== 'Not set' ? userData.phone : '';
-
       } catch (error) {
         console.error('Error loading profile:', error);
       }
     }
 
+    // Load Orders
     async function loadOrders(userId) {
       const container = document.getElementById('ordersContainer');
       try {
@@ -616,7 +646,7 @@
         const snapshot = await getDocs(q);
 
         if (snapshot.empty) {
-          container.innerHTML = `<div class="empty-state"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><p>No orders yet</p></div>`;
+          container.innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg><p>No orders yet</p></div>';
           return;
         }
 
@@ -626,12 +656,10 @@
           const date = new Date(order.date).toLocaleDateString();
           html += `
             <div class="order-item">
-              <div>
-                <div class="order-number">${order.orderNumber}</div>
-                <div class="order-date">${date}</div>
-                <div class="order-details">${order.items.length} item(s) • ${order.governorate}, ${order.city}</div>
-                <span class="order-status">${order.status}</span>
-              </div>
+              <div class="order-number">${order.orderNumber}</div>
+              <div class="order-date">${date}</div>
+              <div class="order-details">${order.items.length} item(s) • ${order.governorate}, ${order.city}</div>
+              <span class="order-status">${order.status}</span>
               <div class="order-price">$${order.total}</div>
             </div>
           `;
@@ -642,6 +670,7 @@
       }
     }
 
+    // Load Addresses
     async function loadAddresses(userId) {
       const container = document.getElementById('addressesContainer');
       try {
@@ -649,7 +678,7 @@
         const snapshot = await getDocs(q);
 
         if (snapshot.empty) {
-          container.innerHTML = `<div class="empty-state"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><p>No saved addresses yet</p></div>`;
+          container.innerHTML = '<div class="empty-state"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg><p>No saved addresses yet</p></div>';
           return;
         }
 
@@ -673,6 +702,7 @@
       }
     }
 
+    // Change Tab
     function changeTab(tab) {
       document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
       document.querySelectorAll('.tab-btn').forEach(el => el.classList.remove('active'));
@@ -680,6 +710,7 @@
       event.target.classList.add('active');
     }
 
+    // Toggle Edit Mode
     function toggleEdit() {
       const viewMode = document.getElementById('viewMode');
       const editForm = document.getElementById('editForm');
@@ -698,6 +729,7 @@
       }
     }
 
+    // Save Profile
     async function saveProfile(e) {
       e.preventDefault();
       
@@ -741,6 +773,7 @@
       }
     }
 
+    // Logout
     function logout() {
       if (confirm('Are you sure you want to logout?')) {
         signOut(auth).then(() => {
@@ -752,11 +785,11 @@
       }
     }
 
+    // Expose functions to global scope
     window.changeTab = changeTab;
     window.toggleEdit = toggleEdit;
     window.saveProfile = saveProfile;
     window.logout = logout;
   </script>
 </body>
-
 </html>
