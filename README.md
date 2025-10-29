@@ -192,13 +192,13 @@ Mobile-Store/
 <img width="1918" height="959" alt="image" src="https://github.com/user-attachments/assets/836165b1-4d84-4316-952a-fcea41f634f6" />
 
 ### Shopping Cart
-*Cart management with item quantities and totals*
+---
 
 ### User Dashboard
-*Account overview with orders and saved addresses*
+---
 
 ### Checkout
-*Multi-step checkout with shipping and order review*
+---
 
 ---
 
