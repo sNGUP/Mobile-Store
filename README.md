@@ -320,7 +320,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 **Project Maintainer:** Your Name
 
 - GitHub: [@sNGUP](https://github.com/sNGUP)
-- Email: your.email@example.com
+- Email: lsfe.ngup@gmail.com
 - Project Link: [https://github.com/sNGUP/Mobile-Store](https://github.com/sNGUP/Mobile-Store)
 
 ---
