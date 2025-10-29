@@ -3,9 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="imag/png" href="../images/checkout.png">
   <title>Checkout - Mobile Store</title>
+  <link rel="icon" type="image/png" href="../images/checkout.png">
+  
   <style>
+    /* ========== BASE STYLES ========== */
     * {
       margin: 0;
       padding: 0;
@@ -17,6 +19,7 @@
       background: #f8f9fa;
     }
 
+    /* ========== HEADER ========== */
     .checkout-header {
       background: white;
       padding: 20px 5%;
@@ -53,15 +56,18 @@
       background: #e5e7eb;
     }
 
+    /* ========== CONTAINER ========== */
     .checkout-container {
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 5% 60px;
     }
 
+    /* ========== PROGRESS STEPS ========== */
     .progress-steps {
       display: flex;
       justify-content: center;
+      align-items: center;
       margin-bottom: 50px;
       gap: 20px;
     }
@@ -83,6 +89,7 @@
       justify-content: center;
       font-weight: 700;
       font-size: 16px;
+      transition: all 0.3s ease;
     }
 
     .step.active .step-number {
@@ -108,9 +115,9 @@
     .step-arrow {
       color: #d1d5db;
       font-size: 20px;
-      margin: 0 10px;
     }
 
+    /* ========== CHECKOUT CONTENT ========== */
     .checkout-content {
       display: grid;
       grid-template-columns: 1fr 400px;
@@ -131,6 +138,7 @@
       margin-bottom: 25px;
     }
 
+    /* ========== FORM ELEMENTS ========== */
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -175,6 +183,11 @@
       box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.1);
     }
 
+    .required {
+      color: #ef4444;
+    }
+
+    /* ========== ORDER SUMMARY ========== */
     .order-summary {
       background: white;
       padding: 30px;
@@ -282,6 +295,7 @@
       color: #2563eb;
     }
 
+    /* ========== BUTTONS ========== */
     .form-actions {
       display: flex;
       gap: 15px;
@@ -321,6 +335,7 @@
       border-color: #d1d5db;
     }
 
+    /* ========== REVIEW SECTION ========== */
     .review-section {
       display: none;
     }
@@ -367,6 +382,7 @@
       text-align: right;
     }
 
+    /* ========== SUCCESS MESSAGE ========== */
     .success-message {
       display: none;
       text-align: center;
@@ -426,6 +442,7 @@
       flex: 0 1 250px;
     }
 
+    /* ========== RESPONSIVE ========== */
     @media (max-width: 968px) {
       .checkout-content {
         grid-template-columns: 1fr;
@@ -439,18 +456,28 @@
       .form-row {
         grid-template-columns: 1fr;
       }
+
+      .progress-steps {
+        flex-wrap: wrap;
+      }
     }
   </style>
 </head>
+
 <body>
+  <!-- ========== HEADER ========== -->
   <header class="checkout-header">
     <div class="header-content">
-      <div class="logo"><img src="../images/mobile_logo.png" alt="Mobile Store logo"></div>
+      <div class="logo">
+        <img src="../images/mobile_logo.png" alt="Mobile Store Logo">
+      </div>
       <button class="back-btn" onclick="window.history.back()">← Back to Shop</button>
     </div>
   </header>
 
+  <!-- ========== MAIN CONTAINER ========== -->
   <div class="checkout-container">
+    <!-- Progress Steps -->
     <div class="progress-steps">
       <div class="step active" id="step1">
         <div class="step-number">1</div>
@@ -468,43 +495,45 @@
       </div>
     </div>
 
+    <!-- Checkout Content -->
     <div class="checkout-content">
+      <!-- Shipping Form -->
       <div class="form-section" id="shippingForm">
         <h2 class="section-title">Shipping Details</h2>
         
         <div class="form-row">
           <div class="form-group">
-            <label>First Name <span style="color: #ef4444;">*</span></label>
+            <label for="firstName">First Name <span class="required">*</span></label>
             <input type="text" id="firstName" required placeholder="Enter first name">
           </div>
           <div class="form-group">
-            <label>Last Name <span style="color: #ef4444;">*</span></label>
+            <label for="lastName">Last Name <span class="required">*</span></label>
             <input type="text" id="lastName" required placeholder="Enter last name">
           </div>
         </div>
 
         <div class="form-group">
-          <label>Email Address <span style="color: #ef4444;">*</span></label>
+          <label for="email">Email Address <span class="required">*</span></label>
           <input type="email" id="email" required placeholder="your.email@example.com">
         </div>
 
         <div class="form-group">
-          <label>Phone Number <span style="color: #ef4444;">*</span></label>
+          <label for="phone">Phone Number <span class="required">*</span></label>
           <input type="tel" id="phone" required placeholder="+20 123 456 7890">
         </div>
 
         <div class="form-group">
-          <label>Street Address <span style="color: #ef4444;">*</span></label>
+          <label for="address">Street Address <span class="required">*</span></label>
           <input type="text" id="address" required placeholder="Street address, apartment, suite">
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label>City <span style="color: #ef4444;">*</span></label>
+            <label for="city">City <span class="required">*</span></label>
             <input type="text" id="city" required placeholder="City">
           </div>
           <div class="form-group">
-            <label>Governorate <span style="color: #ef4444;">*</span></label>
+            <label for="governorate">Governorate <span class="required">*</span></label>
             <select id="governorate" required>
               <option value="">Select Governorate</option>
               <option value="Cairo">Cairo</option>
@@ -519,12 +548,12 @@
         </div>
 
         <div class="form-group">
-          <label>Postal Code</label>
+          <label for="postalCode">Postal Code</label>
           <input type="text" id="postalCode" placeholder="12345">
         </div>
 
         <div class="form-group">
-          <label>Additional Notes (Optional)</label>
+          <label for="notes">Additional Notes (Optional)</label>
           <textarea id="notes" placeholder="Any special instructions for delivery..."></textarea>
         </div>
 
@@ -534,6 +563,7 @@
         </div>
       </div>
 
+      <!-- Review Section -->
       <div class="form-section review-section" id="reviewSection">
         <h2 class="section-title">Review Your Order</h2>
         
@@ -548,6 +578,7 @@
         </div>
       </div>
 
+      <!-- Success Message -->
       <div class="form-section success-message" id="successMessage">
         <div class="success-icon">
           <svg viewBox="0 0 24 24">
@@ -563,6 +594,7 @@
         </div>
       </div>
 
+      <!-- Order Summary Sidebar -->
       <div class="order-summary">
         <h2 class="summary-title">Order Summary</h2>
         <div id="orderItems"></div>
@@ -583,11 +615,13 @@
     </div>
   </div>
 
+  <!-- ========== FIREBASE & SCRIPTS ========== -->
   <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
     import { getAuth, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
     import { getFirestore, collection, addDoc, query, where, getDocs } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 
+    // Firebase Configuration
     const firebaseConfig = {
       apiKey: "AIzaSyAX0ZbKgNoiQuPkrDjPYdW4d3MXbRzibNg",
       authDomain: "mobile-store-76d60.firebaseapp.com",
@@ -598,6 +632,7 @@
       measurementId: "G-LC1Q9TMRYZ"
     };
 
+    // Initialize Firebase
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
@@ -605,6 +640,7 @@
     let currentUser = null;
     let cartData = [];
 
+    // Auth State Observer
     onAuthStateChanged(auth, (user) => {
       if (!user) {
         alert('Please sign in to checkout');
@@ -615,6 +651,7 @@
       initCheckout();
     });
 
+    // Initialize Checkout
     function initCheckout() {
       const urlParams = new URLSearchParams(window.location.search);
       const cartParam = urlParams.get('cart');
@@ -636,6 +673,7 @@
       displayCart();
     }
 
+    // Display Cart Items
     function displayCart() {
       const container = document.getElementById('orderItems');
       let subtotal = 0;
@@ -662,16 +700,17 @@
       document.getElementById('total').textContent = `$${subtotal}`;
     }
 
+    // Submit Shipping Form
     window.submitShipping = function() {
-      const firstName = document.getElementById('firstName').value;
-      const lastName = document.getElementById('lastName').value;
-      const email = document.getElementById('email').value;
-      const phone = document.getElementById('phone').value;
-      const address = document.getElementById('address').value;
-      const city = document.getElementById('city').value;
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const address = document.getElementById('address').value.trim();
+      const city = document.getElementById('city').value.trim();
       const governorate = document.getElementById('governorate').value;
-      const postalCode = document.getElementById('postalCode').value;
-      const notes = document.getElementById('notes').value;
+      const postalCode = document.getElementById('postalCode').value.trim();
+      const notes = document.getElementById('notes').value.trim();
 
       if (!firstName || !lastName || !email || !phone || !address || !city || !governorate) {
         alert('Please fill all required fields');
@@ -691,9 +730,9 @@
       displayReview();
     };
 
+    // Display Review
     function displayReview() {
       const data = window.shippingData;
-      const subtotal = cartData.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
       let shippingHtml = `
         <div class="review-item">
@@ -729,28 +768,9 @@
       `;
 
       document.getElementById('reviewShipping').innerHTML = shippingHtml;
-
-      let itemsHtml = '';
-      cartData.forEach(item => {
-        itemsHtml += `
-          <div class="review-item">
-            <span class="label">${item.name} x${item.quantity}</span>
-            <span class="value">$${item.price * item.quantity}</span>
-          </div>
-        `;
-      });
-
-      itemsHtml += `
-        <div style="margin: 15px 0; height: 1px; background: #e5e7eb;"></div>
-        <div class="review-item">
-          <span class="label" style="font-size: 16px; font-weight: 700;">Total</span>
-          <span class="value" style="font-size: 16px; font-weight: 700; color: #2563eb;">$${subtotal}</span>
-        </div>
-      `;
-
-      document.getElementById('reviewItems').innerHTML = itemsHtml;
     }
 
+    // Go Back to Shipping
     window.goBackToShipping = function() {
       document.getElementById('step2').classList.remove('active');
       document.getElementById('step1').classList.remove('completed');
@@ -759,59 +779,62 @@
       document.getElementById('shippingForm').style.display = 'block';
     };
 
-  window.confirmOrder = async function() {
-    const orderNumber = 'ORD' + Date.now().toString().slice(-8);
-    const subtotal = cartData.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+    // Confirm Order
+    window.confirmOrder = async function() {
+      const orderNumber = 'ORD' + Date.now().toString().slice(-8);
+      const subtotal = cartData.reduce((sum, item) => sum + (item.price * item.quantity), 0);
 
-    const orderData = {
-      userId: currentUser.uid,
-      orderNumber: orderNumber,
-      date: new Date().toISOString(),
-      status: 'Processing',
-      items: cartData,
-      shipping: window.shippingData,
-      total: subtotal,
-      governorate: window.shippingData.governorate,
-      city: window.shippingData.city,
-      address: window.shippingData.address,
-      phone: window.shippingData.phone
-    };
-
-    try {
-      await addDoc(collection(db, 'orders'), orderData);
-
-      const addressData = {
+      const orderData = {
         userId: currentUser.uid,
+        orderNumber: orderNumber,
+        date: new Date().toISOString(),
+        status: 'Processing',
+        items: cartData,
+        shipping: window.shippingData,
+        total: subtotal,
         governorate: window.shippingData.governorate,
         city: window.shippingData.city,
         address: window.shippingData.address,
-        postalCode: window.shippingData.postalCode,
-        phone: window.shippingData.phone,
-        createdAt: new Date().toISOString()
+        phone: window.shippingData.phone
       };
 
-      const q = query(collection(db, 'addresses'), where('userId', '==', currentUser.uid), where('address', '==', addressData.address));
-      const snapshot = await getDocs(q);
+      try {
+        await addDoc(collection(db, 'orders'), orderData);
 
-      if (snapshot.empty) {
-        await addDoc(collection(db, 'addresses'), addressData);
+        const addressData = {
+          userId: currentUser.uid,
+          governorate: window.shippingData.governorate,
+          city: window.shippingData.city,
+          address: window.shippingData.address,
+          postalCode: window.shippingData.postalCode,
+          phone: window.shippingData.phone,
+          createdAt: new Date().toISOString()
+        };
+
+        const q = query(
+          collection(db, 'addresses'), 
+          where('userId', '==', currentUser.uid), 
+          where('address', '==', addressData.address)
+        );
+        const snapshot = await getDocs(q);
+
+        if (snapshot.empty) {
+          await addDoc(collection(db, 'addresses'), addressData);
+        }
+
+        localStorage.removeItem('cart');
+        document.getElementById('orderNumber').textContent = orderNumber;
+        document.getElementById('step2').classList.add('completed');
+        document.getElementById('step2').classList.remove('active');
+        document.getElementById('step3').classList.add('active');
+        document.getElementById('reviewSection').classList.remove('active');
+        document.getElementById('successMessage').classList.add('active');
+        
+      } catch (error) {
+        console.error('Error placing order:', error);
+        alert('Error placing order: ' + error.message);
       }
-
-      localStorage.removeItem('cart');
-      document.getElementById('orderNumber').textContent = orderNumber;
-      document.getElementById('step2').classList.add('completed');
-      document.getElementById('step2').classList.remove('active');
-      document.getElementById('step3').classList.add('active');
-      document.getElementById('reviewSection').classList.remove('active');
-      document.getElementById('successMessage').classList.add('active');
-      
-    } catch (error) {
-      console.error('Error:', error);
-      alert('Error placing order: ' + error.message);
-    }
-  };
-
+    };
   </script>
 </body>
-
 </html>
