@@ -192,13 +192,13 @@ Mobile-Store/
 <img width="1918" height="959" alt="image" src="https://github.com/user-attachments/assets/836165b1-4d84-4316-952a-fcea41f634f6" />
 
 ### Shopping Cart
----
+[]
 
 ### User Dashboard
----
+[]
 
 ### Checkout
----
+[]
 
 ---
 
