@@ -341,7 +341,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
   
   ### Star this repo if you find it helpful!
   
-  **Made with care by [Your Name]**
+  **Made with care by [Abdulrahman]**
   
   ![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=sNGUP.Mobile-Store)
   
