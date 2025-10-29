@@ -1,117 +1,108 @@
-    const products = [
-      {
-        id: 1, 
-        name: "iPhone 15 Pro Max",
-        brand: "Apple",
-        price: 1199, 
-        oldPrice: 1399, 
-        image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&q=80",
-        specs: ["A17 Pro", "8GB RAM", "256GB", "5G"], 
-        badge: "New", 
-        badgeType: "new", 
-        category: "apple" 
-      },
-      {
-        id: 2,
-        name: "Samsung Galaxy S24 Ultra",
-        brand: "Samsung",
-        price: 1099,
-        oldPrice: 1299,
-        image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=500&q=80",
-        specs: ["Snapdragon 8 Gen 3", "12GB RAM", "512GB", "5G"],
-        badge: "Sale",
-        badgeType: "sale",
-        category: "samsung"
-      },
-      {
-        id: 3,
-        name: "Xiaomi 14 Pro",
-        brand: "Xiaomi",
-        price: 799,
-        oldPrice: 999,
-        image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&q=80",
-        specs: ["Snapdragon 8 Gen 3", "12GB RAM", "256GB", "5G"],
-        badge: "Sale",
-        badgeType: "sale",
-        category: "xiaomi"
-      },
-      {
-        id: 4,
-        name: "iPhone 14 Pro",
-        brand: "Apple",
-        price: 899,
-        oldPrice: 1099,
-        image: "https://images.unsplash.com/photo-1663499482523-1c0d2b15ea82?w=500&q=80",
-        specs: ["A16 Bionic", "6GB RAM", "256GB", "5G"],
-        badge: "Sale",
-        badgeType: "sale",
-        category: "apple"
-      },
-      {
-        id: 5,
-        name: "OnePlus 12",
-        brand: "OnePlus",
-        price: 699,
-        oldPrice: 849,
-        image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&q=80",
-        specs: ["Snapdragon 8 Gen 3", "16GB RAM", "512GB", "5G"],
-        badge: "Sale",
-        badgeType: "sale",
-        category: "other"
-      },
-      {
-        id: 6,
-        name: "Samsung Galaxy Z Fold 5",
-        brand: "Samsung",
-        price: 1599,
-        oldPrice: null,
-        image: "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=500&q=80",
-        specs: ["Snapdragon 8 Gen 2", "12GB RAM", "512GB", "5G"],
-        badge: "New",
-        badgeType: "new",
-        category: "samsung"
-      },
-      {
-        id: 7,
-        name: "Xiaomi 13T Pro",
-        brand: "Xiaomi",
-        price: 649,
-        oldPrice: 799,
-        image: "https://images.unsplash.com/photo-1592286927505-b9e4c3a26588?w=500&q=80",
-        specs: ["Dimensity 9200+", "12GB RAM", "256GB", "5G"],
-        badge: "Sale",
-        badgeType: "sale",
-        category: "xiaomi"
-      },
-      {
-        id: 8,
-        name: "iPhone 13",
-        brand: "Apple",
-        price: 599,
-        oldPrice: 799,
-        image: "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500&q=80",
-        specs: ["A15 Bionic", "4GB RAM", "128GB", "5G"],
-        badge: "Sale",
-        badgeType: "sale",
-        category: "apple"
-      },
-      {
-        id: 9,
-        name: "iPhone 13",
-        brand: "Apple",
-        price: 599,
-        oldPrice: 799,
-        image: "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500&q=80",
-        specs: ["A16 Bionic", "4GB RAM", "128GB", "5G"],
-        badge: "Sale",
-        badgeType: "sale",
-        category: "apple"
-      }
-    ];
+// ========== PRODUCTS DATA ==========
+const products = [
+  {
+    id: 1, 
+    name: "iPhone 15 Pro Max",
+    brand: "Apple",
+    price: 1199, 
+    oldPrice: 1399, 
+    image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&q=80",
+    specs: ["A17 Pro", "8GB RAM", "256GB", "5G"], 
+    badge: "New", 
+    badgeType: "new", 
+    category: "apple" 
+  },
+  {
+    id: 2,
+    name: "Samsung Galaxy S24 Ultra",
+    brand: "Samsung",
+    price: 1099,
+    oldPrice: 1299,
+    image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=500&q=80",
+    specs: ["Snapdragon 8 Gen 3", "12GB RAM", "512GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "samsung"
+  },
+  {
+    id: 3,
+    name: "Xiaomi 14 Pro",
+    brand: "Xiaomi",
+    price: 799,
+    oldPrice: 999,
+    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&q=80",
+    specs: ["Snapdragon 8 Gen 3", "12GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "xiaomi"
+  },
+  {
+    id: 4,
+    name: "iPhone 14 Pro",
+    brand: "Apple",
+    price: 899,
+    oldPrice: 1099,
+    image: "https://images.unsplash.com/photo-1663499482523-1c0d2b15ea82?w=500&q=80",
+    specs: ["A16 Bionic", "6GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "apple"
+  },
+  {
+    id: 5,
+    name: "OnePlus 12",
+    brand: "OnePlus",
+    price: 699,
+    oldPrice: 849,
+    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&q=80",
+    specs: ["Snapdragon 8 Gen 3", "16GB RAM", "512GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+  {
+    id: 6,
+    name: "Samsung Galaxy Z Fold 5",
+    brand: "Samsung",
+    price: 1599,
+    oldPrice: null,
+    image: "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=500&q=80",
+    specs: ["Snapdragon 8 Gen 2", "12GB RAM", "512GB", "5G"],
+    badge: "New",
+    badgeType: "new",
+    category: "samsung"
+  },
+  {
+    id: 7,
+    name: "Xiaomi 13T Pro",
+    brand: "Xiaomi",
+    price: 649,
+    oldPrice: 799,
+    image: "https://images.unsplash.com/photo-1592286927505-b9e4c3a26588?w=500&q=80",
+    specs: ["Dimensity 9200+", "12GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "xiaomi"
+  },
+  {
+    id: 8,
+    name: "iPhone 13",
+    brand: "Apple",
+    price: 599,
+    oldPrice: 799,
+    image: "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500&q=80",
+    specs: ["A15 Bionic", "4GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "apple"
+  }
+];
 
+// ========== STATE MANAGEMENT ==========
 let wishlist = JSON.parse(localStorage.getItem('wishlist')) || [];
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+// ========== LOCAL STORAGE HELPERS ==========
 function saveCart() {
   localStorage.setItem('cart', JSON.stringify(cart));
   updateCartCount();
@@ -122,15 +113,20 @@ function saveWishlist() {
   updateWishlistCount();
 }
 
+// ========== INITIALIZATION ==========
 document.addEventListener('DOMContentLoaded', function() {
   displayProducts(products);
   setupNavigation();
+  setupSearchListener();
   updateCartCount();
   updateWishlistCount();
 });
 
+// ========== PRODUCT DISPLAY ==========
 function displayProducts(productsToShow) {
   const grid = document.getElementById('productsGrid');
+  if (!grid) return;
+  
   grid.innerHTML = '';
 
   productsToShow.forEach(product => {
@@ -143,7 +139,7 @@ function displayProducts(productsToShow) {
       <div class="product-image">
         <img src="${product.image}" alt="${product.name}" onerror="this.src='https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&q=80'">
         <span class="product-badge ${product.badgeType}">${product.badge}</span>
-        <button class="wishlist-btn ${isInWishlist ? 'active' : ''}" onclick="toggleWishlistItem(${product.id})">
+        <button class="wishlist-btn ${isInWishlist ? 'active' : ''}" onclick="toggleWishlistItem(${product.id})" aria-label="Add to wishlist">
           <svg viewBox="0 0 24 24">
             <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
           </svg>
@@ -173,6 +169,7 @@ function displayProducts(productsToShow) {
   });
 }
 
+// ========== NAVIGATION ==========
 function setupNavigation() {
   const navLinks = document.querySelectorAll('.nav-link');
   
@@ -215,19 +212,39 @@ function filterProducts(category) {
     desc = 'Amazing discounts on premium smartphones - Limited time offers!';
   }
   
-  document.getElementById('sectionTitle').textContent = title;
-  document.getElementById('sectionDesc').textContent = desc;
+  updateSectionHeader(title, desc);
   displayProducts(filtered);
+}
+
+function updateSectionHeader(title, desc) {
+  const titleEl = document.getElementById('sectionTitle');
+  const descEl = document.getElementById('sectionDesc');
+  
+  if (titleEl) titleEl.textContent = title;
+  if (descEl) descEl.textContent = desc;
+}
+
+// ========== SEARCH ==========
+function setupSearchListener() {
+  const searchInput = document.getElementById('searchInput');
+  if (!searchInput) return;
+  
+  searchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+      searchProducts();
+    }
+  });
 }
 
 function searchProducts() {
   const searchInput = document.getElementById('searchInput');
+  if (!searchInput) return;
+  
   const searchTerm = searchInput.value.toLowerCase().trim();
   
   if (searchTerm === '') {
     displayProducts(products);
-    document.getElementById('sectionTitle').textContent = 'Featured Phones';
-    document.getElementById('sectionDesc').textContent = 'Discover the latest smartphones with amazing features and competitive prices';
+    updateSectionHeader('Featured Phones', 'Discover the latest smartphones with amazing features and competitive prices');
     return;
   }
   
@@ -237,19 +254,15 @@ function searchProducts() {
     product.specs.some(spec => spec.toLowerCase().includes(searchTerm))
   );
   
-  document.getElementById('sectionTitle').textContent = `Search Results for "${searchTerm}"`;
-  document.getElementById('sectionDesc').textContent = `Found ${filtered.length} product(s)`;
+  updateSectionHeader(`Search Results for "${searchTerm}"`, `Found ${filtered.length} product(s)`);
   displayProducts(filtered);
 }
 
-document.getElementById('searchInput').addEventListener('keypress', function(e) {
-  if (e.key === 'Enter') {
-    searchProducts();
-  }
-});
-
+// ========== WISHLIST ==========
 function toggleWishlistItem(productId) {
   const product = products.find(p => p.id === productId);
+  if (!product) return;
+  
   const existingIndex = wishlist.findIndex(item => item.id === productId);
   
   if (existingIndex > -1) {
@@ -264,12 +277,15 @@ function toggleWishlistItem(productId) {
 
 function toggleWishlist() {
   const popup = document.getElementById('wishlistPopup');
+  if (!popup) return;
+  
   popup.classList.add('active');
   displayWishlistItems();
 }
 
 function displayWishlistItems() {
   const container = document.getElementById('wishlistItems');
+  if (!container) return;
   
   if (wishlist.length === 0) {
     container.innerHTML = `
@@ -305,11 +321,15 @@ function removeFromWishlist(productId) {
 }
 
 function updateWishlistCount() {
-  document.getElementById('wishlistCount').textContent = wishlist.length;
+  const countEl = document.getElementById('wishlistCount');
+  if (countEl) countEl.textContent = wishlist.length;
 }
 
+// ========== CART ==========
 function addToCart(productId) {
   const product = products.find(p => p.id === productId);
+  if (!product) return;
+  
   const existingItem = cart.find(item => item.id === productId);
   
   if (existingItem) {
@@ -319,32 +339,34 @@ function addToCart(productId) {
   }
   
   saveCart();
-  
+  showAddToCartFeedback();
+}
+
+function showAddToCartFeedback() {
   const btn = event.target.closest('.add-to-cart-btn');
+  if (!btn) return;
+  
+  const originalContent = btn.innerHTML;
   btn.textContent = 'Added!';
   btn.style.background = '#10b981';
   
   setTimeout(() => {
-    btn.innerHTML = `
-      <svg viewBox="0 0 24 24" style="width: 18px; height: 18px; stroke: white; stroke-width: 2; fill: none;">
-        <circle cx="9" cy="21" r="1"/>
-        <circle cx="20" cy="21" r="1"/>
-        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-      </svg>
-      Add to Cart
-    `;
+    btn.innerHTML = originalContent;
     btn.style.background = '';
   }, 2000);
 }
 
 function toggleCart() {
   const popup = document.getElementById('cartPopup');
+  if (!popup) return;
+  
   popup.classList.add('active');
   displayCartItems();
 }
 
 function displayCartItems() {
   const container = document.getElementById('cartItems');
+  if (!container) return;
   
   if (cart.length === 0) {
     container.innerHTML = `
@@ -392,8 +414,11 @@ function removeFromCart(productId) {
 }
 
 function updateCartCount() {
+  const countEl = document.getElementById('cartCount');
+  if (!countEl) return;
+  
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
-  document.getElementById('cartCount').textContent = totalItems;
+  countEl.textContent = totalItems;
 }
 
 function proceedToCheckout() {
@@ -406,8 +431,10 @@ function proceedToCheckout() {
   window.location.href = `pages/checkout.html?cart=${cartData}`;
 }
 
+// ========== UI CONTROLS ==========
 function closePopup(popupId) {
-  document.getElementById(popupId).classList.remove('active');
+  const popup = document.getElementById(popupId);
+  if (popup) popup.classList.remove('active');
 }
 
 function closePopupOutside(event, popupId) {
@@ -419,15 +446,31 @@ function closePopupOutside(event, popupId) {
 function toggleMenu() {
   const menu = document.getElementById('navMenu');
   const btn = document.querySelector('.mobile-menu-btn');
-  menu.classList.toggle('active');
-  btn.classList.toggle('active');
+  
+  if (menu) menu.classList.toggle('active');
+  if (btn) btn.classList.toggle('active');
+}
+
+function goToHome() {
+  window.location.href = 'index.html';
+}
+
+function goToAccount() {
+  const user = window.firebaseAuth?.currentUser;
+  
+  if (user) {
+    window.location.href = 'pages/account.html';
+  } else {
+    toggleAccount();
+  }
 }
 
 function toggleAccount() {
   const popup = document.getElementById('accountPopup');
-  popup.classList.add('active');
+  if (popup) popup.classList.add('active');
 }
 
+// ========== AUTHENTICATION ==========
 function switchAuthTab(tab) {
   const tabs = document.querySelectorAll('.auth-tab');
   const forms = document.querySelectorAll('.auth-form');
@@ -436,11 +479,11 @@ function switchAuthTab(tab) {
   forms.forEach(f => f.classList.remove('active'));
   
   if (tab === 'signin') {
-    tabs[0].classList.add('active');
-    document.getElementById('signinForm').classList.add('active');
+    tabs[0]?.classList.add('active');
+    document.getElementById('signinForm')?.classList.add('active');
   } else {
-    tabs[1].classList.add('active');
-    document.getElementById('signupForm').classList.add('active');
+    tabs[1]?.classList.add('active');
+    document.getElementById('signupForm')?.classList.add('active');
   }
 }
 
@@ -459,21 +502,16 @@ async function handleSignIn(event) {
     event.target.reset();
   } catch (error) {
     console.error('Sign in error:', error);
-    let errorMessage = 'Failed to sign in. ';
     
-    if (error.code === 'auth/user-not-found') {
-      errorMessage += 'No account found with this email.';
-    } else if (error.code === 'auth/wrong-password') {
-      errorMessage += 'Incorrect password.';
-    } else if (error.code === 'auth/invalid-email') {
-      errorMessage += 'Invalid email address.';
-    } else if (error.code === 'auth/invalid-credential') {
-      errorMessage += 'Invalid email or password.';
-    } else {
-      errorMessage += error.message;
-    }
+    const errorMessages = {
+      'auth/user-not-found': 'No account found with this email.',
+      'auth/wrong-password': 'Incorrect password.',
+      'auth/invalid-email': 'Invalid email address.',
+      'auth/invalid-credential': 'Invalid email or password.'
+    };
     
-    alert(errorMessage);
+    const message = errorMessages[error.code] || error.message;
+    alert(`Failed to sign in. ${message}`);
   }
 }
 
@@ -496,27 +534,22 @@ async function handleSignUp(event) {
   }
   
   try {
-    const userCredential = await window.createUserWithEmailAndPassword(window.firebaseAuth, email, password);
-    const user = userCredential.user;
+    await window.createUserWithEmailAndPassword(window.firebaseAuth, email, password);
     
     alert(`Account created successfully! Welcome ${name}!`);
     closePopup('accountPopup');
     event.target.reset();
   } catch (error) {
     console.error('Sign up error:', error);
-    let errorMessage = 'Failed to create account. ';
     
-    if (error.code === 'auth/email-already-in-use') {
-      errorMessage += 'This email is already registered.';
-    } else if (error.code === 'auth/invalid-email') {
-      errorMessage += 'Invalid email address.';
-    } else if (error.code === 'auth/weak-password') {
-      errorMessage += 'Password is too weak.';
-    } else {
-      errorMessage += error.message;
-    }
+    const errorMessages = {
+      'auth/email-already-in-use': 'This email is already registered.',
+      'auth/invalid-email': 'Invalid email address.',
+      'auth/weak-password': 'Password is too weak.'
+    };
     
-    alert(errorMessage);
+    const message = errorMessages[error.code] || error.message;
+    alert(`Failed to create account. ${message}`);
   }
 }
 
@@ -538,13 +571,13 @@ async function socialLogin(provider) {
   } catch (error) {
     console.error('Social login error:', error);
     
-    if (error.code === 'auth/popup-closed-by-user') {
-      alert('Login cancelled.');
-    } else if (error.code === 'auth/popup-blocked') {
-      alert('Please allow popups for this site to use social login.');
-    } else {
-      alert(`Failed to sign in with ${provider}: ${error.message}`);
-    }
+    const errorMessages = {
+      'auth/popup-closed-by-user': 'Login cancelled.',
+      'auth/popup-blocked': 'Please allow popups for this site to use social login.'
+    };
+    
+    const message = errorMessages[error.code] || error.message;
+    alert(message === 'Login cancelled.' ? message : `Failed to sign in with ${provider}: ${message}`);
   }
 }
 
@@ -563,19 +596,5 @@ async function handleSignOut() {
   } catch (error) {
     console.error('Sign out error:', error);
     alert('Failed to sign out.');
-  }
-}
-
-function goToHome() {
-  window.location.href = 'index.html';
-}
-
-function goToAccount() {
-  const user = window.firebaseAuth.currentUser;
-  
-  if (user) {
-    window.location.href = 'pages/account.html';
-  } else {
-    toggleAccount();
   }
 }
