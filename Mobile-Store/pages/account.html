@@ -367,43 +367,6 @@
       margin: 0 auto 15px;
     }
 
-    /* ========== MESSAGES ========== */
-    .success-msg, .error-msg {
-      padding: 15px 20px;
-      border-radius: 8px;
-      margin-bottom: 20px;
-      border-left: 4px solid;
-      display: none;
-    }
-
-    .success-msg {
-      background: #dcfce7;
-      color: #15803d;
-      border-left-color: #15803d;
-    }
-
-    .error-msg {
-      background: #fee2e2;
-      color: #dc2626;
-      border-left-color: #dc2626;
-    }
-
-    .success-msg.show, .error-msg.show {
-      display: block;
-      animation: slideIn 0.3s ease;
-    }
-
-    @keyframes slideIn {
-      from {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
     /* ========== LOGOUT ========== */
     .logout-footer {
       max-width: 1200px;
@@ -430,6 +393,300 @@
       transform: translateY(-2px);
     }
 
+    /* ========== NOTIFICATION SYSTEM ========== */
+    .notification-container {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 400px;
+    }
+
+    .notification {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      animation: slideInRight 0.4s ease;
+      border-left: 4px solid #2563eb;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .notification::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #2563eb 0%, #1d4ed8 100%);
+      animation: progress 4s linear;
+    }
+
+    .notification.success {
+      border-left-color: #10b981;
+    }
+
+    .notification.success::before {
+      background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+    }
+
+    .notification.error {
+      border-left-color: #ef4444;
+    }
+
+    .notification.error::before {
+      background: linear-gradient(90deg, #ef4444 0%, #dc2626 100%);
+    }
+
+    .notification.warning {
+      border-left-color: #f59e0b;
+    }
+
+    .notification.warning::before {
+      background: linear-gradient(90deg, #f59e0b 0%, #d97706 100%);
+    }
+
+    .notification-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      background: #eff6ff;
+    }
+
+    .notification.success .notification-icon {
+      background: #d1fae5;
+    }
+
+    .notification.error .notification-icon {
+      background: #fee2e2;
+    }
+
+    .notification.warning .notification-icon {
+      background: #fef3c7;
+    }
+
+    .notification-icon svg {
+      width: 24px;
+      height: 24px;
+      stroke: #2563eb;
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    .notification.success .notification-icon svg {
+      stroke: #10b981;
+    }
+
+    .notification.error .notification-icon svg {
+      stroke: #ef4444;
+    }
+
+    .notification.warning .notification-icon svg {
+      stroke: #f59e0b;
+    }
+
+    .notification-content {
+      flex: 1;
+    }
+
+    .notification-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: #1f2937;
+      margin-bottom: 4px;
+    }
+
+    .notification-message {
+      font-size: 14px;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+
+    .notification-close {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 5px;
+      color: #9ca3af;
+      transition: color 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .notification-close:hover {
+      color: #1f2937;
+    }
+
+    @keyframes slideInRight {
+      from {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes progress {
+      from {
+        width: 100%;
+      }
+      to {
+        width: 0%;
+      }
+    }
+
+    .notification.fade-out {
+      animation: fadeOut 0.4s ease forwards;
+    }
+
+    @keyframes fadeOut {
+      to {
+        transform: translateX(400px);
+        opacity: 0;
+      }
+    }
+
+    /* ========== CUSTOM CONFIRMATION DIALOG ========== */
+    .confirm-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 10000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .confirm-overlay.active {
+      display: flex;
+    }
+
+    .confirm-dialog {
+      background: white;
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 450px;
+      width: 90%;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      animation: slideUp 0.3s ease;
+    }
+
+    .confirm-icon {
+      width: 60px;
+      height: 60px;
+      background: #fee2e2;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+
+    .confirm-icon svg {
+      width: 30px;
+      height: 30px;
+      stroke: #ef4444;
+      stroke-width: 2.5;
+      fill: none;
+    }
+
+    .confirm-title {
+      font-size: 22px;
+      font-weight: 700;
+      color: #1f2937;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .confirm-message {
+      font-size: 15px;
+      color: #6b7280;
+      text-align: center;
+      line-height: 1.6;
+      margin-bottom: 25px;
+    }
+
+    .confirm-buttons {
+      display: flex;
+      gap: 12px;
+    }
+
+    .confirm-btn {
+      flex: 1;
+      padding: 14px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .confirm-btn-cancel {
+      background: #f3f4f6;
+      color: #1f2937;
+    }
+
+    .confirm-btn-cancel:hover {
+      background: #e5e7eb;
+    }
+
+    .confirm-btn-confirm {
+      background: #ef4444;
+      color: white;
+    }
+
+    .confirm-btn-confirm:hover {
+      background: #dc2626;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(239, 68, 68, 0.4);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    /* ========== LOADING INDICATOR ========== */
+    .loading-indicator {
+      text-align: center;
+      padding: 40px;
+      color: #6b7280;
+    }
+
     /* ========== RESPONSIVE ========== */
     @media (max-width: 768px) {
       .header {
@@ -450,6 +707,14 @@
       .tabs {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .notification-container {
+        left: 20px;
+        right: 20px;
+        max-width: none;
       }
     }
   </style>
@@ -486,9 +751,6 @@
           <h2>Personal Information</h2>
           <button class="edit-btn" id="editBtn" onclick="toggleEdit()">Edit Profile</button>
         </div>
-
-        <div class="success-msg" id="successMsg">Profile updated successfully!</div>
-        <div class="error-msg" id="errorMsg">Error updating profile. Please try again.</div>
 
         <!-- View Mode -->
         <div id="viewMode">
@@ -538,14 +800,7 @@
       <div class="content-card">
         <h2 style="margin-bottom: 25px; color: #1f2937; font-size: 24px;">Order History</h2>
         <div id="ordersContainer">
-          <div class="empty-state">
-            <svg viewBox="0 0 24 24">
-              <circle cx="9" cy="21" r="1"/>
-              <circle cx="20" cy="21" r="1"/>
-              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-            </svg>
-            <p>No orders yet</p>
-          </div>
+          <div class="loading-indicator">Loading orders...</div>
         </div>
       </div>
     </div>
@@ -555,13 +810,7 @@
       <div class="content-card">
         <h2 style="margin-bottom: 25px; color: #1f2937; font-size: 24px;">Saved Addresses</h2>
         <div id="addressesContainer">
-          <div class="empty-state">
-            <svg viewBox="0 0 24 24">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-            <p>No saved addresses yet</p>
-          </div>
+          <div class="loading-indicator">Loading addresses...</div>
         </div>
       </div>
     </div>
@@ -572,21 +821,57 @@
     <button class="logout-btn" onclick="logout()">Logout</button>
   </div>
 
+  <!-- Custom Confirmation Dialog -->
+  <div class="confirm-overlay" id="confirmDialog">
+    <div class="confirm-dialog">
+      <div class="confirm-icon">
+        <svg viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="15" y1="9" x2="9" y2="15"/>
+          <line x1="9" y1="9" x2="15" y2="15"/>
+        </svg>
+      </div>
+      <h3 class="confirm-title" id="confirmTitle">Logout Confirmation</h3>
+      <p class="confirm-message" id="confirmMessage">Are you sure you want to logout?</p>
+      <div class="confirm-buttons">
+        <button class="confirm-btn confirm-btn-cancel" onclick="closeConfirmDialog()">Cancel</button>
+        <button class="confirm-btn confirm-btn-confirm" id="confirmActionBtn">Logout</button>
+      </div>
+    </div>
+  </div>
+
   <!-- ========== FIREBASE & SCRIPTS ========== -->
   <script type="module">
     import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-    import { getAuth, onAuthStateChanged, signOut, updateProfile } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
-    import { getFirestore, collection, query, where, getDocs, doc, setDoc, getDoc } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
+    import { 
+      getAuth, 
+      onAuthStateChanged, 
+      signOut, 
+      updateProfile,
+      setPersistence,
+      browserLocalPersistence 
+    } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+    import { 
+      getFirestore, 
+      collection, 
+      query, 
+      where, 
+      getDocs, 
+      doc, 
+      setDoc, 
+      getDoc,
+      orderBy
+    } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js';
 
     // Firebase Configuration
     const firebaseConfig = {
-      apiKey: "AIzaSyAX0ZbKgNoiQuPkrDjPYdW4d3MXbRzibNg",
-      authDomain: "mobile-store-76d60.firebaseapp.com",
-      projectId: "mobile-store-76d60",
-      storageBucket: "mobile-store-76d60.firebasestorage.app",
-      messagingSenderId: "92732043159",
-      appId: "1:92732043159:web:96083c907b065fc37b5ed2",
-      measurementId: "G-LC1Q9TMRYZ"
+      apiKey: "AIzaSyD4_RugWl5WtJAKFT63sIs4XPnbx7JAXyk",
+      authDomain: "mobile-store-7759c.firebaseapp.com",
+      projectId: "mobile-store-7759c",
+      storageBucket: "mobile-store-7759c.firebasestorage.app",
+      messagingSenderId: "242927412737",
+      appId: "1:242927412737:web:92f95aadf7ad087e8c0200",
+      measurementId: "G-SLX652ESDZ"
     };
 
     // Initialize Firebase
@@ -596,16 +881,106 @@
 
     let currentUser = null;
 
+    // Set persistence to LOCAL
+    setPersistence(auth, browserLocalPersistence)
+      .then(() => {
+        console.log('✅ Auth persistence set to LOCAL');
+      })
+      .catch((error) => {
+        console.error('❌ Persistence error:', error);
+      });
+
+    // Notification System
+    function showNotification(message, type = 'info', title = '') {
+      let container = document.querySelector('.notification-container');
+      if (!container) {
+        container = document.createElement('div');
+        container.className = 'notification-container';
+        document.body.appendChild(container);
+      }
+
+      const icons = {
+        success: '<polyline points="20 6 9 17 4 12"/>',
+        error: '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>',
+        warning: '<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
+        info: '<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>'
+      };
+
+      const titles = {
+        success: title || 'Success!',
+        error: title || 'Error!',
+        warning: title || 'Warning!',
+        info: title || 'Info'
+      };
+
+      const notification = document.createElement('div');
+      notification.className = `notification ${type}`;
+      notification.innerHTML = `
+        <div class="notification-icon">
+          <svg viewBox="0 0 24 24">${icons[type]}</svg>
+        </div>
+        <div class="notification-content">
+          <div class="notification-title">${titles[type]}</div>
+          <div class="notification-message">${message}</div>
+        </div>
+        <button class="notification-close" onclick="this.parentElement.remove()">✕</button>
+      `;
+
+      container.appendChild(notification);
+
+      setTimeout(() => {
+        notification.classList.add('fade-out');
+        setTimeout(() => notification.remove(), 400);
+      }, 4000);
+    }
+
+    // Custom Confirmation Dialog
+    function showConfirmDialog(title, message, onConfirm, confirmBtnText = 'Confirm') {
+      document.getElementById('confirmTitle').textContent = title;
+      document.getElementById('confirmMessage').textContent = message;
+      
+      const confirmBtn = document.getElementById('confirmActionBtn');
+      confirmBtn.textContent = confirmBtnText;
+      
+      const newConfirmBtn = confirmBtn.cloneNode(true);
+      confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
+      
+      newConfirmBtn.onclick = function() {
+        closeConfirmDialog();
+        onConfirm();
+      };
+      
+      document.getElementById('confirmDialog').classList.add('active');
+    }
+
+    function closeConfirmDialog() {
+      document.getElementById('confirmDialog').classList.remove('active');
+    }
+
+    // Close dialog when clicking outside
+    document.getElementById('confirmDialog').addEventListener('click', function(e) {
+      if (e.target.id === 'confirmDialog') {
+        closeConfirmDialog();
+      }
+    });
+
     // Auth State Observer
     onAuthStateChanged(auth, (user) => {
+      console.log('🔄 Auth state changed:', user ? user.email : 'No user');
+      
       if (user) {
+        console.log('✅ User logged in:', user.email);
         currentUser = user;
         document.getElementById('userName').textContent = user.displayName || user.email.split('@')[0];
         loadProfileData(user);
         loadOrders(user.uid);
         loadAddresses(user.uid);
       } else {
-        window.location.href = '../index.html';
+        console.log('❌ No user logged in - redirecting...');
+        showNotification('Please sign in to access your account', 'warning');
+        setTimeout(() => {
+          window.location.href = '../index.html';
+        }, 2000);
       }
     });
 
@@ -635,14 +1010,20 @@
         document.getElementById('inputPhone').value = userData.phone !== 'Not set' ? userData.phone : '';
       } catch (error) {
         console.error('Error loading profile:', error);
+        showNotification('Error loading profile data', 'error');
       }
     }
 
     // Load Orders
     async function loadOrders(userId) {
       const container = document.getElementById('ordersContainer');
+      container.innerHTML = '<div class="loading-indicator">Loading orders...</div>';
+      
       try {
-        const q = query(collection(db, 'orders'), where('userId', '==', userId));
+        const q = query(
+          collection(db, 'orders'), 
+          where('userId', '==', userId)
+        );
         const snapshot = await getDocs(q);
 
         if (snapshot.empty) {
@@ -650,29 +1031,50 @@
           return;
         }
 
-        let html = '';
+        let orders = [];
         snapshot.forEach(doc => {
-          const order = doc.data();
-          const date = new Date(order.date).toLocaleDateString();
+          orders.push({ id: doc.id, ...doc.data() });
+        });
+        
+        // Sort by date descending
+        orders.sort((a, b) => {
+          const dateA = new Date(a.date || a.createdAt || 0);
+          const dateB = new Date(b.date || b.createdAt || 0);
+          return dateB - dateA;
+        });
+
+        let html = '';
+        orders.forEach(order => {
+          const orderDate = order.date || order.createdAt || 'N/A';
+          const date = orderDate !== 'N/A' ? new Date(orderDate).toLocaleDateString('en-US', { 
+            year: 'numeric', 
+            month: 'short', 
+            day: 'numeric' 
+          }) : 'N/A';
+          
           html += `
             <div class="order-item">
-              <div class="order-number">${order.orderNumber}</div>
+              <div class="order-number">Order #${order.orderNumber || order.id.substring(0, 8)}</div>
               <div class="order-date">${date}</div>
-              <div class="order-details">${order.items.length} item(s) • ${order.governorate}, ${order.city}</div>
-              <span class="order-status">${order.status}</span>
-              <div class="order-price">$${order.total}</div>
+              <div class="order-details">${order.items?.length || 0} item(s) • ${order.governorate || 'N/A'}, ${order.city || 'N/A'}</div>
+              <span class="order-status">${order.status || 'Processing'}</span>
+              <div class="order-price">${order.total || 0} EGP</div>
             </div>
           `;
         });
         container.innerHTML = html;
       } catch (error) {
         console.error('Error loading orders:', error);
+        container.innerHTML = '<div class="empty-state"><p style="color: #ef4444;">Error loading orders. Please refresh the page.</p></div>';
+        showNotification('Error loading orders', 'error');
       }
     }
 
     // Load Addresses
     async function loadAddresses(userId) {
       const container = document.getElementById('addressesContainer');
+      container.innerHTML = '<div class="loading-indicator">Loading addresses...</div>';
+      
       try {
         const q = query(collection(db, 'addresses'), where('userId', '==', userId));
         const snapshot = await getDocs(q);
@@ -687,11 +1089,11 @@
           const addr = doc.data();
           html += `
             <div class="address-item">
-              <div class="address-title">${addr.governorate}, ${addr.city}</div>
+              <div class="address-title">${addr.governorate || 'N/A'}, ${addr.city || 'N/A'}</div>
               <div class="address-text">
-                ${addr.address}<br>
+                ${addr.address || 'N/A'}<br>
                 ${addr.postalCode ? `Postal Code: ${addr.postalCode}<br>` : ''}
-                Phone: ${addr.phone}
+                Phone: ${addr.phone || 'N/A'}
               </div>
             </div>
           `;
@@ -699,6 +1101,8 @@
         container.innerHTML = html;
       } catch (error) {
         console.error('Error loading addresses:', error);
+        container.innerHTML = '<div class="empty-state"><p style="color: #ef4444;">Error loading addresses. Please refresh the page.</p></div>';
+        showNotification('Error loading addresses', 'error');
       }
     }
 
@@ -726,6 +1130,11 @@
         editForm.style.display = 'none';
         editBtn.textContent = 'Edit Profile';
         editBtn.classList.remove('cancel');
+        
+        // Reset form values
+        if (currentUser) {
+          loadProfileData(currentUser);
+        }
       }
     }
 
@@ -740,6 +1149,13 @@
 
       const name = document.getElementById('inputName').value.trim();
       const phone = document.getElementById('inputPhone').value.trim();
+
+      if (!name) {
+        showNotification('Please enter your name', 'error');
+        saveBtn.textContent = originalText;
+        saveBtn.disabled = false;
+        return;
+      }
 
       try {
         await updateProfile(currentUser, { displayName: name });
@@ -756,17 +1172,11 @@
         document.getElementById('displayPhone').textContent = phone || 'Not set';
         document.getElementById('userName').textContent = name;
         
-        const successMsg = document.getElementById('successMsg');
-        successMsg.classList.add('show');
-        setTimeout(() => successMsg.classList.remove('show'), 3000);
-        
+        showNotification('Profile updated successfully!', 'success');
         toggleEdit();
       } catch (error) {
         console.error('Error saving profile:', error);
-        const errorMsg = document.getElementById('errorMsg');
-        errorMsg.textContent = 'Error: ' + error.message;
-        errorMsg.classList.add('show');
-        setTimeout(() => errorMsg.classList.remove('show'), 3000);
+        showNotification('Error updating profile: ' + error.message, 'error');
       } finally {
         saveBtn.textContent = originalText;
         saveBtn.disabled = false;
@@ -775,14 +1185,22 @@
 
     // Logout
     function logout() {
-      if (confirm('Are you sure you want to logout?')) {
-        signOut(auth).then(() => {
-          window.location.href = '../index.html';
-        }).catch((error) => {
-          console.error('Error signing out:', error);
-          alert('Error signing out. Please try again.');
-        });
-      }
+      showConfirmDialog(
+        'Logout Confirmation',
+        'Are you sure you want to logout? You will need to sign in again to access your account.',
+        function() {
+          signOut(auth).then(() => {
+            showNotification('Logged out successfully', 'success');
+            setTimeout(() => {
+              window.location.href = '../index.html';
+            }, 1000);
+          }).catch((error) => {
+            console.error('Error signing out:', error);
+            showNotification('Error signing out. Please try again.', 'error');
+          });
+        },
+        'Logout'
+      );
     }
 
     // Expose functions to global scope
@@ -790,6 +1208,8 @@
     window.toggleEdit = toggleEdit;
     window.saveProfile = saveProfile;
     window.logout = logout;
+    window.showConfirmDialog = showConfirmDialog;
+    window.closeConfirmDialog = closeConfirmDialog;
   </script>
 </body>
 </html>
