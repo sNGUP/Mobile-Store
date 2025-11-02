@@ -1,12 +1,13 @@
 // ========== PRODUCTS DATA ==========
 const products = [
+  // ===== APPLE iPhones =====
   {
     id: 1, 
     name: "iPhone 15 Pro Max",
     brand: "Apple",
-    price: 1199, 
-    oldPrice: 1399, 
-    image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?w=500&q=80",
+    price: 65999, 
+    oldPrice: 72999, 
+    image: "",
     specs: ["A17 Pro", "8GB RAM", "256GB", "5G"], 
     badge: "New", 
     badgeType: "new", 
@@ -14,87 +15,585 @@ const products = [
   },
   {
     id: 2,
-    name: "Samsung Galaxy S24 Ultra",
-    brand: "Samsung",
-    price: 1099,
-    oldPrice: 1299,
-    image: "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?w=500&q=80",
-    specs: ["Snapdragon 8 Gen 3", "12GB RAM", "512GB", "5G"],
-    badge: "Sale",
-    badgeType: "sale",
-    category: "samsung"
+    name: "iPhone 15 Pro",
+    brand: "Apple",
+    price: 58999,
+    oldPrice: 64999,
+    image: "",
+    specs: ["A17 Pro", "8GB RAM", "128GB", "5G"],
+    badge: "New",
+    badgeType: "new",
+    category: "apple"
   },
   {
     id: 3,
-    name: "Xiaomi 14 Pro",
-    brand: "Xiaomi",
-    price: 799,
-    oldPrice: 999,
-    image: "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&q=80",
-    specs: ["Snapdragon 8 Gen 3", "12GB RAM", "256GB", "5G"],
+    name: "iPhone 15 Plus",
+    brand: "Apple",
+    price: 52999,
+    oldPrice: 58999,
+    image: "",
+    specs: ["A16 Bionic", "6GB RAM", "128GB", "5G"],
     badge: "Sale",
     badgeType: "sale",
-    category: "xiaomi"
+    category: "apple"
   },
   {
     id: 4,
-    name: "iPhone 14 Pro",
+    name: "iPhone 15",
     brand: "Apple",
-    price: 899,
-    oldPrice: 1099,
-    image: "https://images.unsplash.com/photo-1663499482523-1c0d2b15ea82?w=500&q=80",
-    specs: ["A16 Bionic", "6GB RAM", "256GB", "5G"],
+    price: 46999,
+    oldPrice: 51999,
+    image: "",
+    specs: ["A16 Bionic", "6GB RAM", "128GB", "5G"],
     badge: "Sale",
     badgeType: "sale",
     category: "apple"
   },
   {
     id: 5,
-    name: "OnePlus 12",
-    brand: "OnePlus",
-    price: 699,
-    oldPrice: 849,
-    image: "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&q=80",
-    specs: ["Snapdragon 8 Gen 3", "16GB RAM", "512GB", "5G"],
+    name: "iPhone 14 Pro Max",
+    brand: "Apple",
+    price: 52999,
+    oldPrice: 62999,
+    image: "",
+    specs: ["A16 Bionic", "6GB RAM", "256GB", "5G"],
     badge: "Sale",
     badgeType: "sale",
-    category: "other"
+    category: "apple"
   },
   {
     id: 6,
-    name: "Samsung Galaxy Z Fold 5",
+    name: "iPhone 14 Pro",
+    brand: "Apple",
+    price: 46999,
+    oldPrice: 54999,
+    image: "",
+    specs: ["A16 Bionic", "6GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "apple"
+  },
+  {
+    id: 7,
+    name: "iPhone 14 Plus",
+    brand: "Apple",
+    price: 42999,
+    oldPrice: 49999,
+    image: "",
+    specs: ["A15 Bionic", "6GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "apple"
+  },
+  {
+    id: 8,
+    name: "iPhone 14",
+    brand: "Apple",
+    price: 38999,
+    oldPrice: 44999,
+    image: "",
+    specs: ["A15 Bionic", "6GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "apple"
+  },
+  {
+    id: 9,
+    name: "iPhone 13",
+    brand: "Apple",
+    price: 32999,
+    oldPrice: 38999,
+    image: "",
+    specs: ["A15 Bionic", "4GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "apple"
+  },
+  {
+    id: 10,
+    name: "iPhone 12",
+    brand: "Apple",
+    price: 26999,
+    oldPrice: 32999,
+    image: "",
+    specs: ["A14 Bionic", "4GB RAM", "64GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "apple"
+  },
+  {
+    id: 11,
+    name: "iPhone SE (2022)",
+    brand: "Apple",
+    price: 21999,
+    oldPrice: 26999,
+    image: "",
+    specs: ["A15 Bionic", "4GB RAM", "64GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "apple"
+  },
+
+  // ===== SAMSUNG Galaxy =====
+  {
+    id: 12,
+    name: "Samsung Galaxy S24 Ultra",
     brand: "Samsung",
-    price: 1599,
-    oldPrice: null,
-    image: "https://images.unsplash.com/photo-1585060544812-6b45742d762f?w=500&q=80",
-    specs: ["Snapdragon 8 Gen 2", "12GB RAM", "512GB", "5G"],
+    price: 59999,
+    oldPrice: 68999,
+    image: "",
+    specs: ["Snapdragon 8 Gen 3", "12GB RAM", "256GB", "5G"],
     badge: "New",
     badgeType: "new",
     category: "samsung"
   },
   {
-    id: 7,
+    id: 13,
+    name: "Samsung Galaxy S24+",
+    brand: "Samsung",
+    price: 48999,
+    oldPrice: 56999,
+    image: "",
+    specs: ["Exynos 2400", "12GB RAM", "256GB", "5G"],
+    badge: "New",
+    badgeType: "new",
+    category: "samsung"
+  },
+  {
+    id: 14,
+    name: "Samsung Galaxy S24",
+    brand: "Samsung",
+    price: 42999,
+    oldPrice: 49999,
+    image: "",
+    specs: ["Exynos 2400", "8GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "samsung"
+  },
+  {
+    id: 15,
+    name: "Samsung Galaxy S23 Ultra",
+    brand: "Samsung",
+    price: 48999,
+    oldPrice: 58999,
+    image: "",
+    specs: ["Snapdragon 8 Gen 2", "12GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "samsung"
+  },
+  {
+    id: 16,
+    name: "Samsung Galaxy S23",
+    brand: "Samsung",
+    price: 34999,
+    oldPrice: 42999,
+    image: "",
+    specs: ["Snapdragon 8 Gen 2", "8GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "samsung"
+  },
+  {
+    id: 17,
+    name: "Samsung Galaxy Z Fold 5",
+    brand: "Samsung",
+    price: 82999,
+    oldPrice: null,
+    image: "",
+    specs: ["Snapdragon 8 Gen 2", "12GB RAM", "256GB", "5G"],
+    badge: "New",
+    badgeType: "new",
+    category: "samsung"
+  },
+  {
+    id: 18,
+    name: "Samsung Galaxy Z Flip 5",
+    brand: "Samsung",
+    price: 52999,
+    oldPrice: null,
+    image: "",
+    specs: ["Snapdragon 8 Gen 2", "8GB RAM", "256GB", "5G"],
+    badge: "New",
+    badgeType: "new",
+    category: "samsung"
+  },
+  {
+    id: 19,
+    name: "Samsung Galaxy A54",
+    brand: "Samsung",
+    price: 18999,
+    oldPrice: 22999,
+    image: "",
+    specs: ["Exynos 1380", "8GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "samsung"
+  },
+  {
+    id: 20,
+    name: "Samsung Galaxy A34",
+    brand: "Samsung",
+    price: 14999,
+    oldPrice: 17999,
+    image: "",
+    specs: ["Dimensity 1080", "8GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "samsung"
+  },
+  {
+    id: 21,
+    name: "Samsung Galaxy A24",
+    brand: "Samsung",
+    price: 10999,
+    oldPrice: 12999,
+    image: "",
+    specs: ["Helio G99", "6GB RAM", "128GB", "4G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "samsung"
+  },
+
+  // ===== XIAOMI =====
+  {
+    id: 22,
+    name: "Xiaomi 14 Pro",
+    brand: "Xiaomi",
+    price: 42999,
+    oldPrice: 49999,
+    image: "",
+    specs: ["Snapdragon 8 Gen 3", "12GB RAM", "256GB", "5G"],
+    badge: "New",
+    badgeType: "new",
+    category: "xiaomi"
+  },
+  {
+    id: 23,
+    name: "Xiaomi 14",
+    brand: "Xiaomi",
+    price: 36999,
+    oldPrice: 42999,
+    image: "",
+    specs: ["Snapdragon 8 Gen 3", "12GB RAM", "256GB", "5G"],
+    badge: "New",
+    badgeType: "new",
+    category: "xiaomi"
+  },
+  {
+    id: 24,
     name: "Xiaomi 13T Pro",
     brand: "Xiaomi",
-    price: 649,
-    oldPrice: 799,
-    image: "https://images.unsplash.com/photo-1592286927505-b9e4c3a26588?w=500&q=80",
+    price: 28999,
+    oldPrice: 34999,
+    image: "",
     specs: ["Dimensity 9200+", "12GB RAM", "256GB", "5G"],
     badge: "Sale",
     badgeType: "sale",
     category: "xiaomi"
   },
   {
-    id: 8,
-    name: "iPhone 13",
-    brand: "Apple",
-    price: 599,
-    oldPrice: 799,
-    image: "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?w=500&q=80",
-    specs: ["A15 Bionic", "4GB RAM", "128GB", "5G"],
+    id: 25,
+    name: "Xiaomi 13 Pro",
+    brand: "Xiaomi",
+    price: 32999,
+    oldPrice: 39999,
+    image: "",
+    specs: ["Snapdragon 8 Gen 2", "12GB RAM", "256GB", "5G"],
     badge: "Sale",
     badgeType: "sale",
-    category: "apple"
+    category: "xiaomi"
+  },
+  {
+    id: 26,
+    name: "Xiaomi 13",
+    brand: "Xiaomi",
+    price: 26999,
+    oldPrice: 32999,
+    image: "",
+    specs: ["Snapdragon 8 Gen 2", "8GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "xiaomi"
+  },
+  {
+    id: 27,
+    name: "Redmi Note 13 Pro+",
+    brand: "Xiaomi",
+    price: 16999,
+    oldPrice: 19999,
+    image: "",
+    specs: ["Dimensity 7200", "8GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "xiaomi"
+  },
+  {
+    id: 28,
+    name: "Redmi Note 13 Pro",
+    brand: "Xiaomi",
+    price: 13999,
+    oldPrice: 16999,
+    image: "",
+    specs: ["Helio G99", "8GB RAM", "256GB", "4G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "xiaomi"
+  },
+  {
+    id: 29,
+    name: "POCO X6 Pro",
+    brand: "Xiaomi",
+    price: 14999,
+    oldPrice: 17999,
+    image: "",
+    specs: ["Dimensity 8300", "12GB RAM", "512GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "xiaomi"
+  },
+  {
+    id: 30,
+    name: "POCO F6",
+    brand: "Xiaomi",
+    price: 18999,
+    oldPrice: 22999,
+    image: "",
+    specs: ["Snapdragon 8s Gen 3", "12GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "xiaomi"
+  },
+
+  // ===== OPPO =====
+  {
+    id: 31,
+    name: "OPPO Find X7 Ultra",
+    brand: "OPPO",
+    price: 48999,
+    oldPrice: 56999,
+    image: "",
+    specs: ["Snapdragon 8 Gen 3", "16GB RAM", "512GB", "5G"],
+    badge: "New",
+    badgeType: "new",
+    category: "other"
+  },
+  {
+    id: 32,
+    name: "OPPO Reno 11 Pro",
+    brand: "OPPO",
+    price: 22999,
+    oldPrice: 26999,
+    image: "",
+    specs: ["Dimensity 8200", "12GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+  {
+    id: 33,
+    name: "OPPO A78",
+    brand: "OPPO",
+    price: 10999,
+    oldPrice: 12999,
+    image: "",
+    specs: ["Dimensity 700", "8GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+
+  // ===== REALME =====
+  {
+    id: 34,
+    name: "Realme GT 5 Pro",
+    brand: "Realme",
+    price: 26999,
+    oldPrice: 32999,
+    image: "",
+    specs: ["Snapdragon 8 Gen 3", "12GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+  {
+    id: 35,
+    name: "Realme 12 Pro+",
+    brand: "Realme",
+    price: 16999,
+    oldPrice: 19999,
+    image: "",
+    specs: ["Snapdragon 7s Gen 2", "12GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+  {
+    id: 36,
+    name: "Realme C55",
+    brand: "Realme",
+    price: 7999,
+    oldPrice: 9999,
+    image: "",
+    specs: ["Helio G88", "8GB RAM", "128GB", "4G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+
+  // ===== ONEPLUS =====
+  {
+    id: 37,
+    name: "OnePlus 12",
+    brand: "OnePlus",
+    price: 38999,
+    oldPrice: 45999,
+    image: "",
+    specs: ["Snapdragon 8 Gen 3", "16GB RAM", "512GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+  {
+    id: 38,
+    name: "OnePlus 11",
+    brand: "OnePlus",
+    price: 28999,
+    oldPrice: 34999,
+    image: "",
+    specs: ["Snapdragon 8 Gen 2", "16GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+  {
+    id: 39,
+    name: "OnePlus Nord 3",
+    brand: "OnePlus",
+    price: 18999,
+    oldPrice: 22999,
+    image: "",
+    specs: ["Dimensity 9000", "16GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+
+  // ===== HONOR =====
+  {
+    id: 40,
+    name: "Honor Magic 6 Pro",
+    brand: "Honor",
+    price: 42999,
+    oldPrice: 49999,
+    image: "",
+    specs: ["Snapdragon 8 Gen 3", "12GB RAM", "512GB", "5G"],
+    badge: "New",
+    badgeType: "new",
+    category: "other"
+  },
+  {
+    id: 41,
+    name: "Honor 90",
+    brand: "Honor",
+    price: 18999,
+    oldPrice: 22999,
+    image: "",
+    specs: ["Snapdragon 7 Gen 1", "12GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+
+  // ===== VIVO =====
+  {
+    id: 42,
+    name: "Vivo X100 Pro",
+    brand: "Vivo",
+    price: 46999,
+    oldPrice: 54999,
+    image: "",
+    specs: ["Dimensity 9300", "16GB RAM", "512GB", "5G"],
+    badge: "New",
+    badgeType: "new",
+    category: "other"
+  },
+  {
+    id: 43,
+    name: "Vivo V29",
+    brand: "Vivo",
+    price: 19999,
+    oldPrice: 23999,
+    image: "",
+    specs: ["Snapdragon 778G", "12GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+
+  // ===== GOOGLE PIXEL =====
+  {
+    id: 44,
+    name: "Google Pixel 8 Pro",
+    brand: "Google",
+    price: 52999,
+    oldPrice: 59999,
+    image: "",
+    specs: ["Tensor G3", "12GB RAM", "256GB", "5G"],
+    badge: "New",
+    badgeType: "new",
+    category: "other"
+  },
+  {
+    id: 45,
+    name: "Google Pixel 8",
+    brand: "Google",
+    price: 42999,
+    oldPrice: 49999,
+    image: "",
+    specs: ["Tensor G3", "8GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+  {
+    id: 46,
+    name: "Google Pixel 7a",
+    brand: "Google",
+    price: 26999,
+    oldPrice: 32999,
+    image: "",
+    specs: ["Tensor G2", "8GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+
+  // ===== NOTHING =====
+  {
+    id: 47,
+    name: "Nothing Phone (2)",
+    brand: "Nothing",
+    price: 28999,
+    oldPrice: 34999,
+    image: "",
+    specs: ["Snapdragon 8+ Gen 1", "12GB RAM", "256GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
+  },
+  {
+    id: 48,
+    name: "Nothing Phone (1)",
+    brand: "Nothing",
+    price: 19999,
+    oldPrice: 24999,
+    image: "",
+    specs: ["Snapdragon 778G+", "8GB RAM", "128GB", "5G"],
+    badge: "Sale",
+    badgeType: "sale",
+    category: "other"
   }
 ];
 
@@ -307,7 +806,17 @@ function displayWishlistItems() {
       <div class="popup-item-info">
         <div class="popup-item-name">${item.name}</div>
         <div class="popup-item-price">${item.price} EGP</div>
-        <button class="remove-btn" onclick="removeFromWishlist(${item.id})">Remove</button>
+        <div class="wishlist-actions">
+          <button class="add-to-cart-btn-mini" onclick="moveToCart(${item.id})">
+            <svg viewBox="0 0 24 24">
+              <circle cx="9" cy="21" r="1"/>
+              <circle cx="20" cy="21" r="1"/>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+            </svg>
+            Add to Cart
+          </button>
+          <button class="remove-btn" onclick="removeFromWishlist(${item.id})">Remove</button>
+        </div>
       </div>
     </div>
   `).join('');
@@ -318,6 +827,58 @@ function removeFromWishlist(productId) {
   saveWishlist();
   displayWishlistItems();
   displayProducts(products);
+}
+
+// Wishlist to Cart
+function moveToCart(productId) {
+  const product = wishlist.find(item => item.id === productId);
+  if (!product) return;
+  
+  // Add to cart
+  const existingItem = cart.find(item => item.id === productId);
+  
+  if (existingItem) {
+    existingItem.quantity++;
+  } else {
+    cart.push({...product, quantity: 1});
+  }
+  
+  // Delete from wishlist
+  wishlist = wishlist.filter(item => item.id !== productId);
+  
+  // Save
+  saveCart();
+  saveWishlist();
+  
+  displayWishlistItems();
+  displayProducts(products);
+  
+  // Notification
+  showMoveToCartNotification(product.name);
+}
+
+function showMoveToCartNotification(productName) {
+  const notification = document.createElement('div');
+  notification.className = 'cart-notification';
+  notification.innerHTML = `
+    <svg viewBox="0 0 24 24" style="width: 20px; height: 20px; stroke: white; fill: none; stroke-width: 2;">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span>Added to cart!</span>
+  `;
+  
+  document.body.appendChild(notification);
+  
+  setTimeout(() => {
+    notification.classList.add('show');
+  }, 10);
+  
+  setTimeout(() => {
+    notification.classList.remove('show');
+    setTimeout(() => {
+      notification.remove();
+    }, 300);
+  }, 2500);
 }
 
 function updateWishlistCount() {
@@ -423,7 +984,7 @@ function updateCartCount() {
 
 function proceedToCheckout() {
   if (cart.length === 0) {
-    alert('Your cart is empty!');
+    showNotification('Your cart is empty!', 'warning');
     return;
   }
   
@@ -497,7 +1058,7 @@ async function handleSignIn(event) {
     const userCredential = await window.signInWithEmailAndPassword(window.firebaseAuth, email, password);
     const user = userCredential.user;
     
-    alert(`Welcome back! Signed in as ${user.email}`);
+    showNotification(`Signed in as ${user.email}`, 'success', 'Welcome back!');
     closePopup('accountPopup');
     event.target.reset();
   } catch (error) {
@@ -511,7 +1072,7 @@ async function handleSignIn(event) {
     };
     
     const message = errorMessages[error.code] || error.message;
-    alert(`Failed to sign in. ${message}`);
+    showNotification(message, 'error', 'Failed to sign in');
   }
 }
 
@@ -524,19 +1085,19 @@ async function handleSignUp(event) {
   const confirmPassword = event.target[3].value;
   
   if (password !== confirmPassword) {
-    alert('Passwords do not match!');
+    showNotification('Passwords do not match!', 'error');
     return;
   }
   
   if (password.length < 6) {
-    alert('Password must be at least 6 characters long!');
+    showNotification('Password must be at least 6 characters long!', 'warning');
     return;
   }
   
   try {
     await window.createUserWithEmailAndPassword(window.firebaseAuth, email, password);
     
-    alert(`Account created successfully! Welcome ${name}!`);
+    showNotification(`Welcome ${name}!`, 'success', 'Account created successfully!');
     closePopup('accountPopup');
     event.target.reset();
   } catch (error) {
@@ -549,7 +1110,7 @@ async function handleSignUp(event) {
     };
     
     const message = errorMessages[error.code] || error.message;
-    alert(`Failed to create account. ${message}`);
+    showNotification(message, 'error', 'Failed to create account');
   }
 }
 
@@ -566,7 +1127,7 @@ async function socialLogin(provider) {
     const result = await window.signInWithPopup(window.firebaseAuth, authProvider);
     const user = result.user;
     
-    alert(`Welcome! Signed in with ${provider} as ${user.email || user.displayName}`);
+    showNotification(`Signed in as ${user.email || user.displayName}`, 'success', `Welcome!`);
     closePopup('accountPopup');
   } catch (error) {
     console.error('Social login error:', error);
@@ -577,7 +1138,12 @@ async function socialLogin(provider) {
     };
     
     const message = errorMessages[error.code] || error.message;
-    alert(message === 'Login cancelled.' ? message : `Failed to sign in with ${provider}: ${message}`);
+    
+    if (message === 'Login cancelled.') {
+      showNotification(message, 'info');
+    } else {
+      showNotification(message, 'error', `Failed to sign in with ${provider}`);
+    }
   }
 }
 
@@ -592,9 +1158,59 @@ function updateUIForLoggedOutUser() {
 async function handleSignOut() {
   try {
     await window.signOut(window.firebaseAuth);
-    alert('Signed out successfully!');
+    showNotification('Signed out successfully!', 'success');
   } catch (error) {
     console.error('Sign out error:', error);
-    alert('Failed to sign out.');
+    showNotification('Failed to sign out.', 'error');
   }
+}
+
+// ========== NOTIFICATION SYSTEM ==========
+function showNotification(message, type = 'info', title = '') {
+  // Create container if it doesn't exist
+  let container = document.querySelector('.notification-container');
+  if (!container) {
+    container = document.createElement('div');
+    container.className = 'notification-container';
+    document.body.appendChild(container);
+  }
+
+  // Set title and icon based on type
+  const icons = {
+    success: '<polyline points="20 6 9 17 4 12"/>',
+    error: '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>',
+    warning: '<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>',
+    info: '<circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>'
+  };
+
+  const titles = {
+    success: title || 'Success!',
+    error: title || 'Error!',
+    warning: title || 'Warning!',
+    info: title || 'Info'
+  };
+
+  // Create notification
+  const notification = document.createElement('div');
+  notification.className = `notification ${type}`;
+  notification.innerHTML = `
+    <div class="notification-icon">
+      <svg viewBox="0 0 24 24">${icons[type]}</svg>
+    </div>
+    <div class="notification-content">
+      <div class="notification-title">${titles[type]}</div>
+      <div class="notification-message">${message}</div>
+    </div>
+    <button class="notification-close" onclick="this.parentElement.remove()">✕</button>
+  `;
+
+  container.appendChild(notification);
+
+  // Auto remove after 4 seconds
+  setTimeout(() => {
+    notification.classList.add('fade-out');
+    setTimeout(() => {
+      notification.remove();
+    }, 400);
+  }, 4000);
 }
