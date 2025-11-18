@@ -318,6 +318,42 @@ function filterMultipleBrands(brandsList) {
   if (resultCount) resultCount.textContent = filtered.length;
   if (totalCount) totalCount.textContent = products.length;
 }
+// ========== FILTER BY PRICE RANGE ==========
+function filterByPriceRange(minPrice, maxPrice, title, description) {
+  const heroSection = document.querySelector('.hero-section');
+  const brandsSection = document.querySelector('.brands-section');
+  const promoBanners = document.querySelector('.promo-banners');
+  const productsListContainer = document.getElementById('products-list-container');
+  const featuresSection = document.querySelector('.features-section');
+  const categoriesSection = document.querySelector('.categories-section');
+  const testimonialsSection = document.querySelector('.testimonials-section');
+  const newsletterSection = document.querySelector('.newsletter-section');
+  
+  if (heroSection) heroSection.style.display = 'none';
+  if (brandsSection) brandsSection.style.display = 'none';
+  if (promoBanners) promoBanners.style.display = 'none';
+  if (featuresSection) featuresSection.style.display = 'none';
+  if (categoriesSection) categoriesSection.style.display = 'none';
+  if (testimonialsSection) testimonialsSection.style.display = 'none';
+  if (newsletterSection) newsletterSection.style.display = 'none';
+  if (productsListContainer) productsListContainer.style.display = 'block';
+  
+  let filtered = products.filter(p => p.price >= minPrice && p.price <= maxPrice);
+  
+  filtered.sort((a, b) => a.price - b.price);
+  
+  updateSectionHeader(title, description);
+  
+  initializeFilters();
+  resetFilters();
+  
+  displayProducts(filtered);
+  
+  const resultCount = document.getElementById('resultCount');
+  const totalCount = document.getElementById('totalCount');
+  if (resultCount) resultCount.textContent = filtered.length;
+  if (totalCount) totalCount.textContent = products.length;
+}
 
 function updateSectionHeader(title, desc) {
   const titleEl = document.getElementById('sectionTitle');
