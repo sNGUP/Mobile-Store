@@ -658,15 +658,33 @@ proceedToCheckout()
 ### Homepage
 <img width="1918" height="959" alt="Homepage" src="https://github.com/user-attachments/assets/836165b1-4d84-4316-952a-fcea41f634f6" />
 
-### Additional Screenshots
-- Shopping Cart
-- Product Details Popup
-- Filter System
-- User Dashboard
-- Checkout Process
-- Order Confirmation
+### Shopping Cart
+<img width="1405" height="822" alt="image" src="https://github.com/user-attachments/assets/343d0eb1-4e6b-4024-9ef3-8b8f50c90bbb" />
 
-*(Screenshots to be added)*
+### Product Details Popup
+<img width="1403" height="853" alt="image" src="https://github.com/user-attachments/assets/bcb28520-f69d-4daa-b1fa-a097176f2527" />
+<img width="1409" height="830" alt="image" src="https://github.com/user-attachments/assets/68fd3bcc-f567-4255-8ce2-c7379bf82d44" />
+
+### Filter System
+<img width="1417" height="822" alt="image" src="https://github.com/user-attachments/assets/efbdcb6b-e29c-47d5-9891-42b35f7de3b8" />
+
+### User Dashboard (My Profile)
+<img width="1415" height="855" alt="image" src="https://github.com/user-attachments/assets/de0fa6dd-a3f5-429c-ab6b-dee4322c267f" />
+
+### User Dashboard (My Orders)
+<img width="1407" height="787" alt="image" src="https://github.com/user-attachments/assets/74bc1606-bc4c-4f01-8166-90b6cd96405c" />
+
+### User Dashboard (My Orders)
+<img width="1406" height="744" alt="image" src="https://github.com/user-attachments/assets/92c95bc5-faf2-47b0-8bb6-e307a5094f5e" />
+
+### Checkout Process
+<img width="1407" height="848" alt="image" src="https://github.com/user-attachments/assets/302ff363-9ddf-4e54-a9a6-d106aebb92cd" />
+
+### Order Confirmation
+<img width="1412" height="690" alt="image" src="https://github.com/user-attachments/assets/064c21dd-11a4-4cd5-95e8-454f23009155" />
+
+### Order Placed Successfully!
+<img width="1415" height="590" alt="image" src="https://github.com/user-attachments/assets/f78c0f3a-513c-45e1-99c8-100683dce613" />
 
 ---
 
@@ -753,12 +771,10 @@ SOFTWARE.
 ## Acknowledgments
 
 - [Firebase](https://firebase.google.com/) - Backend infrastructure and authentication
-- [Unsplash](https://unsplash.com/) - High-quality product images
 - [Google Fonts](https://fonts.google.com/) - Roboto font family
 - [Heroicons](https://heroicons.com/) - Beautiful SVG icons
-- [Claude AI](https://claude.ai/) - Storage API for persistent data
 - All contributors who helped improve this project
-
+~ Karam Muhammad Karam
 ---
 
 ## Future Enhancements
