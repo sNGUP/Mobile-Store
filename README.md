@@ -2,7 +2,8 @@
 
 <div align="center">
   
-  ![Mobile Store Banner](https://img.shields.io/badge/Mobile-Store-2563eb?style=for-the-badge&logo=apple&logoColor=white)
+  ![Mobile Store Banner](<img width="383" height="111" alt="mobile_logo" src="https://github.com/user-attachments/assets/f3dcb98c-d14a-4850-967b-87c8d95dbc96" />
+)
   
   **A modern, feature-rich e-commerce platform for mobile phones with advanced filtering and real-time product management**
   
