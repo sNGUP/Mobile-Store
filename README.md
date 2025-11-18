@@ -661,6 +661,9 @@ proceedToCheckout()
 ### Shopping Cart
 <img width="1405" height="822" alt="image" src="https://github.com/user-attachments/assets/343d0eb1-4e6b-4024-9ef3-8b8f50c90bbb" />
 
+### Wishlist
+<img width="1404" height="809" alt="image" src="https://github.com/user-attachments/assets/a7935dc2-f1eb-4b48-bbe8-2d4a0ee2fb3c" />
+
 ### Product Details Popup
 <img width="1403" height="853" alt="image" src="https://github.com/user-attachments/assets/bcb28520-f69d-4daa-b1fa-a097176f2527" />
 <img width="1409" height="830" alt="image" src="https://github.com/user-attachments/assets/68fd3bcc-f567-4255-8ce2-c7379bf82d44" />
