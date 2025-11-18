@@ -1,4 +1,4 @@
-# 📱 Mobile Store - Premium E-Commerce Platform
+# Mobile Store - Premium E-Commerce Platform
 
 <div align="center">
   
@@ -17,10 +17,10 @@
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
 - [Overview](#-overview)
-- [✨ New Features](#-new-features-2025)
+- [New Features](#-new-features-2025)
 - [Core Features](#-core-features)
 - [Tech Stack](#-tech-stack)
 - [Getting Started](#-getting-started)
@@ -35,27 +35,27 @@
 
 ---
 
-## 🌟 Overview
+## Overview
 
 **Mobile Store** is a cutting-edge, fully responsive e-commerce platform designed specifically for mobile phone retail. Built with vanilla JavaScript and powered by Firebase, it delivers a seamless shopping experience with real-time authentication, advanced product filtering, persistent storage, and a complete checkout system.
 
-### 🎯 Why Choose Mobile Store?
+### Why Choose Mobile Store?
 
-- **🎨 Modern UI/UX** - Professional design with smooth animations and micro-interactions
-- **📱 Fully Responsive** - Optimized for all devices (Mobile, Tablet, Desktop)
-- **⚡ Fast & Lightweight** - Pure vanilla JS, no heavy frameworks
-- **🔒 Secure Authentication** - Firebase Auth with social login (Google & Facebook)
-- **🛒 Complete E-Commerce Flow** - From browsing to order confirmation
-- **🎯 Advanced Filtering** - Multi-parameter product filtering with real-time updates
-- **💾 Persistent Storage** - Cart and wishlist data stored using Claude's storage API
-- **🎥 Dynamic Hero Section** - Video backgrounds with auto-slideshow
-- **📦 60+ Products** - Extensive catalog across 9 major brands
+- **Modern UI/UX** - Professional design with smooth animations and micro-interactions
+- **Fully Responsive** - Optimized for all devices (Mobile, Tablet, Desktop)
+- **Fast & Lightweight** - Pure vanilla JS, no heavy frameworks
+- **Secure Authentication** - Firebase Auth with social login (Google & Facebook)
+- **Complete E-Commerce Flow** - From browsing to order confirmation
+- **Advanced Filtering** - Multi-parameter product filtering with real-time updates
+- **Persistent Storage** - Cart and wishlist data stored using Claude's storage API
+- **Dynamic Hero Section** - Video backgrounds with auto-slideshow
+- **60+ Products** - Extensive catalog across 9 major brands
 
 ---
 
-## ✨ New Features (2025)
+## New Features (2025)
 
-### 🔍 Advanced Filter System
+### Advanced Filter System
 - **Multi-Parameter Filtering**
   - Filter by Brand, RAM, Storage, Network (5G/4G)
   - Camera specifications and Battery capacity
@@ -67,13 +67,13 @@
   - Reset and apply filter controls
   - Mobile-optimized responsive design
 
-### 🎬 Enhanced Hero Section
+### Enhanced Hero Section
 - **Video Backgrounds** - Dynamic video hero slider with smooth transitions
 - **Auto-Slideshow** - Automatic slide progression with video end detection
 - **Fallback Handling** - Graceful error handling for video playback issues
 - **Responsive Design** - Optimized video display across all devices
 
-### 🛍️ Product Details Popup
+### Product Details Popup
 - **Rich Product Information**
   - High-resolution product images with zoom
   - Detailed specifications in organized tabs
@@ -89,13 +89,13 @@
   - Add to wishlist with visual feedback
   - Real-time stock updates
 
-### 💾 Persistent Data Storage
+### Persistent Data Storage
 - **Cart Persistence** - Shopping cart data saved across sessions
 - **Wishlist Storage** - Favorite products remembered
 - **Claude Storage API** - Utilizing advanced storage capabilities
 - **Error Handling** - Robust error management with fallback mechanisms
 
-### 📦 Expanded Product Catalog
+### Expanded Product Catalog
 - **60+ Premium Smartphones** across 9 major brands
 - **Detailed Specifications** for each product:
   - Processor details (Snapdragon, Dimensity, Apple Silicon)
@@ -109,7 +109,7 @@
 - **Dynamic Pricing** with old price comparisons
 - **Stock Management** with availability indicators
 
-### 🎨 UI/UX Enhancements
+### UI/UX Enhancements
 - **Interactive Sections**
   - Features section with hover effects
   - Popular categories grid
@@ -128,7 +128,7 @@
   - Loading indicators
   - Success/error notifications
 
-### 🔔 Advanced Notification System
+### Advanced Notification System
 - **Toast Notifications** with auto-dismiss
 - **Color-Coded Alerts** (Success, Error, Warning, Info)
 - **Progress Bar** showing auto-close countdown
@@ -136,9 +136,9 @@
 - **Stacked Display** for multiple notifications
 - **Mobile Optimized** responsive positioning
 
-### 📄 Enhanced Pages
+### Enhanced Pages
 
-#### 🏠 Home Page
+#### Home Page
 - Dynamic video hero section
 - Featured brands showcase
 - Product categories grid
@@ -147,7 +147,7 @@
 - Feature highlights
 - Promotional banners
 
-#### 🛒 Checkout Page
+#### Checkout Page
 - Multi-step checkout process (Shipping → Review → Complete)
 - Egyptian governorate selection
 - Address validation
@@ -155,7 +155,7 @@
 - Order confirmation with unique order number
 - Firebase Firestore integration for order storage
 
-#### 👤 Account Page
+#### Account Page
 - User profile management
 - Order history with detailed view
 - Saved addresses management
@@ -166,9 +166,9 @@
 
 ---
 
-## 🚀 Core Features
+## Core Features
 
-### 🛍️ Shopping Experience
+### Shopping Experience
 - **Product Catalog** - Browse 60+ smartphones across 9 brands
 - **Smart Search** - Real-time search by name, brand, or specs
 - **Advanced Filtering** - Multi-parameter filtering (Brand, RAM, Storage, Camera, Network, Battery, Price)
@@ -177,7 +177,7 @@
 - **Wishlist** - Save favorite products with persistent storage
 - **Shopping Cart** - Add/remove items with quantity management and persistence
 
-### 👤 User Management
+### User Management
 - **Firebase Authentication** - Secure email/password sign-in
 - **Social Login** - Google and Facebook authentication
 - **User Dashboard** - Personal account management
@@ -185,14 +185,14 @@
 - **Saved Addresses** - Store multiple shipping addresses
 - **Profile Management** - Edit personal information and preferences
 
-### 💳 Checkout Process
+### Checkout Process
 - **Multi-Step Checkout** - Shipping → Review → Confirmation
 - **Address Management** - Save addresses for future orders
 - **Order Summary** - Clear breakdown with itemized list
 - **Order Confirmation** - Unique order numbers and notifications
 - **Firestore Integration** - Secure order storage in Firebase
 
-### 🎨 Design & UX
+### Design & UX
 - **Responsive Design** - Mobile-first approach with tablet and desktop optimization
 - **Smooth Animations** - CSS transitions, hover effects, and micro-interactions
 - **Loading States** - Visual feedback for all user actions
@@ -202,7 +202,7 @@
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### Frontend
 - **HTML5** - Semantic markup with proper structure
@@ -227,7 +227,7 @@
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -330,7 +330,7 @@
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 Mobile-Store/
@@ -374,11 +374,11 @@ Mobile-Store/
 
 ---
 
-## 📦 Product Catalog
+## Product Catalog
 
 ### Brands & Models (60+ Products)
 
-#### 🍎 Apple (17 Models)
+#### Apple (17 Models)
 - iPhone 17 Pro Max, 17 Pro, 17
 - iPhone 16 Pro Max, 16 Pro, 16
 - iPhone 15 Pro Max, 15 Pro, 15 Plus, 15
@@ -386,45 +386,45 @@ Mobile-Store/
 - iPhone 13, 12
 - iPhone SE (2022)
 
-#### 📱 Samsung (10 Models)
+#### Samsung (10 Models)
 - Galaxy S24 Ultra, S24+, S24
 - Galaxy S23 Ultra, S23
 - Galaxy Z Fold 5, Z Flip 5
 - Galaxy A54, A34, A24
 
-#### 🔥 Xiaomi (9 Models)
+#### Xiaomi (9 Models)
 - Xiaomi 14 Pro, 14
 - Xiaomi 13T Pro, 13 Pro, 13
 - Redmi Note 13 Pro+, 13 Pro
 - POCO X6 Pro, X6
 
-#### 🎯 OPPO (9 Models)
+#### OPPO (9 Models)
 - Find X7 Ultra
 - Reno 14, 11 Pro, 11
 - A98, A78, A60, A5, A3
 
-#### ⚡ Realme (3 Models)
+#### Realme (3 Models)
 - GT 5 Pro
 - 12 Pro+
 - C53
 
-#### 1️⃣ OnePlus (3 Models)
+#### OnePlus (3 Models)
 - OnePlus 12, 11
 - Nord 3
 
-#### 🏆 Honor (2 Models)
+#### Honor (2 Models)
 - Magic 6 Pro
 - Honor 90
 
-#### 📸 Vivo (2 Models)
+#### Vivo (2 Models)
 - X100 Pro
 - V29
 
-#### 🟢 Google Pixel (3 Models)
+#### Google Pixel (3 Models)
 - Pixel 8 Pro, 8
 - Pixel 7a
 
-#### ⚫ Nothing (2 Models)
+#### Nothing (2 Models)
 - Phone (2)
 - Phone (1)
 
@@ -449,7 +449,7 @@ Each product includes:
 
 ---
 
-## ⚙️ Configuration
+## Configuration
 
 ### Firebase Setup
 
@@ -530,7 +530,7 @@ const cart = result ? JSON.parse(result.value) : [];
 
 ---
 
-## 📖 Usage Guide
+## Usage Guide
 
 ### Adding Products
 
@@ -653,7 +653,7 @@ proceedToCheckout()
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 ### Homepage
 <img width="1918" height="959" alt="Homepage" src="https://github.com/user-attachments/assets/836165b1-4d84-4316-952a-fcea41f634f6" />
@@ -670,7 +670,7 @@ proceedToCheckout()
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
@@ -710,7 +710,7 @@ Contributions are what make the open-source community such an amazing place to l
 
 ---
 
-## 📄 License
+## License
 
 Distributed under the MIT License. See `LICENSE` file for more information.
 
@@ -740,17 +740,17 @@ SOFTWARE.
 
 ---
 
-## 📞 Contact
+## Contact
 
 **Project Maintainer:** Abdulrahman
 
-- 📧 Email: lsfe.ngup@gmail.com
-- 🐙 GitHub: [@sNGUP](https://github.com/sNGUP)
-- 🔗 Project Link: [https://github.com/sNGUP/Mobile-Store](https://github.com/sNGUP/Mobile-Store)
+- Email: lsfe.ngup@gmail.com
+- GitHub: [@sNGUP](https://github.com/sNGUP)
+- Project Link: [https://github.com/sNGUP/Mobile-Store](https://github.com/sNGUP/Mobile-Store)
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - [Firebase](https://firebase.google.com/) - Backend infrastructure and authentication
 - [Unsplash](https://unsplash.com/) - High-quality product images
@@ -761,7 +761,7 @@ SOFTWARE.
 
 ---
 
-## 🚀 Future Enhancements
+## Future Enhancements
 
 ### Planned Features
 - [ ] Payment gateway integration (Stripe/PayPal)
@@ -781,12 +781,12 @@ SOFTWARE.
 
 <div align="center">
   
-  ### ⭐ Star this repo if you find it helpful!
+  ### Star this repo if you find it helpful!
   
   **Made with ❤️ by Abdulrahman**
   
   ![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=sNGUP.Mobile-Store)
   
-  © 2025 Mobile Store. All rights reserved.
+  © 2025 Mobile Store.
   
 </div>
