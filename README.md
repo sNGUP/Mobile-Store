@@ -674,7 +674,7 @@ proceedToCheckout()
 ### User Dashboard (My Orders)
 <img width="1407" height="787" alt="image" src="https://github.com/user-attachments/assets/74bc1606-bc4c-4f01-8166-90b6cd96405c" />
 
-### User Dashboard (My Orders)
+### User Dashboard (My Addresses)
 <img width="1406" height="744" alt="image" src="https://github.com/user-attachments/assets/92c95bc5-faf2-47b0-8bb6-e307a5094f5e" />
 
 ### Checkout Process
