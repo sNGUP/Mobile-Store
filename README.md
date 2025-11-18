@@ -19,19 +19,19 @@
 
 ## Table of Contents
 
-- [Overview](#-overview)
-- [New Features](#-new-features-2025)
-- [Core Features](#-core-features)
-- [Tech Stack](#-tech-stack)
-- [Getting Started](#-getting-started)
-- [Project Structure](#-project-structure)
-- [Product Catalog](#-product-catalog)
-- [Configuration](#-configuration)
-- [Usage Guide](#-usage-guide)
-- [Screenshots](#-screenshots)
-- [Contributing](#-contributing)
-- [License](#-license)
-- [Contact](#-contact)
+- [Overview](#overview)
+- [New Features](#new-features-2025)
+- [Core Features](#core-features)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Product Catalog](#product-catalog)
+- [Configuration](#configuration)
+- [Usage Guide](#usage-guide)
+- [Screenshots](#screenshots)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
 ---
 
