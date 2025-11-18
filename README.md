@@ -656,7 +656,7 @@ proceedToCheckout()
 ## Screenshots
 
 ### Homepage
-<img width="1918" height="959" alt="Homepage" src="https://github.com/user-attachments/assets/836165b1-4d84-4316-952a-fcea41f634f6" />
+<img width="1420" height="822" alt="image" src="https://github.com/user-attachments/assets/2d3197fb-0055-44d2-a8fc-a20cb89922b8" />
 
 ### Shopping Cart
 <img width="1405" height="822" alt="image" src="https://github.com/user-attachments/assets/343d0eb1-4e6b-4024-9ef3-8b8f50c90bbb" />
